@@ -25,6 +25,15 @@
 		A633381625BCB40C00572A01 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633381525BCB40C00572A01 /* FavoritesViewController.swift */; };
 		A633381B25BCB43A00572A01 /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633381A25BCB43A00572A01 /* FavoritesCoordinator.swift */; };
 		A633382025BCB4E300572A01 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633381F25BCB4E300572A01 /* TabBarViewController.swift */; };
+		A633382625BCBC1B00572A01 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633382525BCBC1B00572A01 /* APIError.swift */; };
+		A633382B25BCBC3500572A01 /* APIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633382A25BCBC3500572A01 /* APIClientProtocol.swift */; };
+		A633383025BCBC6C00572A01 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633382F25BCBC6C00572A01 /* APIClient.swift */; };
+		A633383625BCBCC800572A01 /* APIStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633383525BCBCC800572A01 /* APIStatusCode.swift */; };
+		A633383B25BCBCF700572A01 /* APIScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633383A25BCBCF700572A01 /* APIScheme.swift */; };
+		A633384025BCBD1D00572A01 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633383F25BCBD1D00572A01 /* APIMethod.swift */; };
+		A633384625BCBD7100572A01 /* Parameters+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633384525BCBD7100572A01 /* Parameters+Utils.swift */; };
+		A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633384B25BCBDB500572A01 /* APIEndpointProtocol.swift */; };
+		A633385125BCBE0700572A01 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633385025BCBE0700572A01 /* URL+Utils.swift */; };
 		BD4095D30CCE249D7BB40B1B /* Pods_Breeds_BreedsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9148F98AA7046AF6EB062D82 /* Pods_Breeds_BreedsUITests.framework */; };
 		D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669DFF9495BBB1F9E188D19 /* Pods_Breeds.framework */; };
 		D6EF34A2B92A1780A8E48F91 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */; };
@@ -76,6 +85,15 @@
 		A633381525BCB40C00572A01 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		A633381A25BCB43A00572A01 /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
 		A633381F25BCB4E300572A01 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A633382525BCBC1B00572A01 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		A633382A25BCBC3500572A01 /* APIClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientProtocol.swift; sourceTree = "<group>"; };
+		A633382F25BCBC6C00572A01 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A633383525BCBCC800572A01 /* APIStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStatusCode.swift; sourceTree = "<group>"; };
+		A633383A25BCBCF700572A01 /* APIScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIScheme.swift; sourceTree = "<group>"; };
+		A633383F25BCBD1D00572A01 /* APIMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
+		A633384525BCBD7100572A01 /* Parameters+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parameters+Utils.swift"; sourceTree = "<group>"; };
+		A633384B25BCBDB500572A01 /* APIEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpointProtocol.swift; sourceTree = "<group>"; };
+		A633385025BCBE0700572A01 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
 		B5C4AEBB5AE9720BA6EAE486 /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67983B89336B77153A1053 /* Pods-Breeds-BreedsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD7FC84A60304F771E69E79B /* Pods-Breeds-BreedsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +237,10 @@
 		A63337BC25BCA30600572A01 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A633382425BCBC0100572A01 /* APIClient */,
+				A633384A25BCBDA800572A01 /* Endpoint */,
+				A633384425BCBD6400572A01 /* Extensions */,
+				A633383425BCBCAD00572A01 /* WebService */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -351,6 +373,43 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A633382425BCBC0100572A01 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				A633382F25BCBC6C00572A01 /* APIClient.swift */,
+				A633382A25BCBC3500572A01 /* APIClientProtocol.swift */,
+				A633382525BCBC1B00572A01 /* APIError.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		A633383425BCBCAD00572A01 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				A633383F25BCBD1D00572A01 /* APIMethod.swift */,
+				A633383A25BCBCF700572A01 /* APIScheme.swift */,
+				A633383525BCBCC800572A01 /* APIStatusCode.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		A633384425BCBD6400572A01 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A633384525BCBD7100572A01 /* Parameters+Utils.swift */,
+				A633385025BCBE0700572A01 /* URL+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A633384A25BCBDA800572A01 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				A633384B25BCBDB500572A01 /* APIEndpointProtocol.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 		C5DED0BC985FB6A3AC55EA59 /* Pods */ = {
@@ -587,17 +646,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63337D325BCA4BA00572A01 /* Coordinator+Navigation.swift in Sources */,
+				A633385125BCBE0700572A01 /* URL+Utils.swift in Sources */,
+				A633384025BCBD1D00572A01 /* APIMethod.swift in Sources */,
+				A633383025BCBC6C00572A01 /* APIClient.swift in Sources */,
 				A63337F525BCA69B00572A01 /* UITableView+Identifiable.swift in Sources */,
+				A633383625BCBCC800572A01 /* APIStatusCode.swift in Sources */,
+				A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */,
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,
 				A63337DC25BCA4F200572A01 /* Coordinator.swift in Sources */,
 				A633382025BCB4E300572A01 /* TabBarViewController.swift in Sources */,
 				A63337E125BCA54900572A01 /* ViewCode.swift in Sources */,
 				A63337F025BCA63E00572A01 /* UICollectionView+Identifiable.swift in Sources */,
+				A633383B25BCBCF700572A01 /* APIScheme.swift in Sources */,
 				A633381B25BCB43A00572A01 /* FavoritesCoordinator.swift in Sources */,
+				A633382625BCBC1B00572A01 /* APIError.swift in Sources */,
 				A63337C625BCA3BD00572A01 /* BreedsListViewController.swift in Sources */,
+				A633384625BCBD7100572A01 /* Parameters+Utils.swift in Sources */,
 				A63337E825BCA5FC00572A01 /* Identifiable.swift in Sources */,
 				A633380D25BCB24200572A01 /* BreedsListCoordinator.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
+				A633382B25BCBC3500572A01 /* APIClientProtocol.swift in Sources */,
 				A633381625BCB40C00572A01 /* FavoritesViewController.swift in Sources */,
 				A633377C25BCA09C00572A01 /* SceneDelegate.swift in Sources */,
 			);
