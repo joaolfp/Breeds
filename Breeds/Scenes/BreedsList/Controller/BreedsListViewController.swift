@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BreedsListViewController.swift
 //  Breeds
 //
 //  Created by joao.lucas.f.pereira on 23/01/21.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BreedsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .blue
     }
 
-
 }
-

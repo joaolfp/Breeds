@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633377925BCA09C00572A01 /* AppDelegate.swift */; };
 		A633377C25BCA09C00572A01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633377B25BCA09C00572A01 /* SceneDelegate.swift */; };
-		A633377E25BCA09C00572A01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633377D25BCA09C00572A01 /* ViewController.swift */; };
-		A633378125BCA09C00572A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A633377F25BCA09C00572A01 /* Main.storyboard */; };
 		A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A633378225BCA09C00572A01 /* Breeds.xcdatamodeld */; };
 		A633378625BCA09F00572A01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A633378525BCA09F00572A01 /* Assets.xcassets */; };
 		A633378925BCA09F00572A01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A633378725BCA09F00572A01 /* LaunchScreen.storyboard */; };
 		A633379425BCA0A000572A01 /* BreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633379325BCA0A000572A01 /* BreedsTests.swift */; };
 		A633379F25BCA0A000572A01 /* BreedsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633379E25BCA0A000572A01 /* BreedsUITests.swift */; };
+		A63337C625BCA3BD00572A01 /* BreedsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337C525BCA3BD00572A01 /* BreedsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 		A633377625BCA09C00572A01 /* Breeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A633377925BCA09C00572A01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A633377B25BCA09C00572A01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A633377D25BCA09C00572A01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A633378025BCA09C00572A01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A633378325BCA09C00572A01 /* Breeds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Breeds.xcdatamodel; sourceTree = "<group>"; };
 		A633378525BCA09F00572A01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A633378825BCA09F00572A01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +48,7 @@
 		A633379A25BCA0A000572A01 /* BreedsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreedsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A633379E25BCA0A000572A01 /* BreedsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsUITests.swift; sourceTree = "<group>"; };
 		A63337A025BCA0A000572A01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A63337C525BCA3BD00572A01 /* BreedsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +99,12 @@
 		A633377825BCA09C00572A01 /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
-				A633377925BCA09C00572A01 /* AppDelegate.swift */,
-				A633377B25BCA09C00572A01 /* SceneDelegate.swift */,
-				A633377D25BCA09C00572A01 /* ViewController.swift */,
-				A633377F25BCA09C00572A01 /* Main.storyboard */,
-				A633378525BCA09F00572A01 /* Assets.xcassets */,
-				A633378725BCA09F00572A01 /* LaunchScreen.storyboard */,
-				A633378A25BCA09F00572A01 /* Info.plist */,
+				A63337B525BCA2C800572A01 /* Application */,
 				A633378225BCA09C00572A01 /* Breeds.xcdatamodeld */,
+				A63337BA25BCA2E200572A01 /* Common */,
+				A63337BC25BCA30600572A01 /* Network */,
+				A63337B925BCA2D500572A01 /* Resources */,
+				A63337BB25BCA2EE00572A01 /* Scenes */,
 			);
 			path = Breeds;
 			sourceTree = "<group>";
@@ -129,6 +125,87 @@
 				A63337A025BCA0A000572A01 /* Info.plist */,
 			);
 			path = BreedsUITests;
+			sourceTree = "<group>";
+		};
+		A63337B525BCA2C800572A01 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A633377925BCA09C00572A01 /* AppDelegate.swift */,
+				A633377B25BCA09C00572A01 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A63337B925BCA2D500572A01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A633378525BCA09F00572A01 /* Assets.xcassets */,
+				A633378725BCA09F00572A01 /* LaunchScreen.storyboard */,
+				A633378A25BCA09F00572A01 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A63337BA25BCA2E200572A01 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A63337BB25BCA2EE00572A01 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A63337C025BCA34400572A01 /* BreedsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A63337BC25BCA30600572A01 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A63337C025BCA34400572A01 /* BreedsList */ = {
+			isa = PBXGroup;
+			children = (
+				A63337C125BCA35200572A01 /* Controller */,
+				A63337C225BCA35700572A01 /* Coordinator */,
+				A63337C325BCA35D00572A01 /* Model */,
+				A63337C425BCA37400572A01 /* View */,
+			);
+			path = BreedsList;
+			sourceTree = "<group>";
+		};
+		A63337C125BCA35200572A01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A63337C525BCA3BD00572A01 /* BreedsListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A63337C225BCA35700572A01 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A63337C325BCA35D00572A01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A63337C425BCA37400572A01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +313,6 @@
 			files = (
 				A633378925BCA09F00572A01 /* LaunchScreen.storyboard in Resources */,
 				A633378625BCA09F00572A01 /* Assets.xcassets in Resources */,
-				A633378125BCA09C00572A01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,
-				A633377E25BCA09C00572A01 /* ViewController.swift in Sources */,
+				A63337C625BCA3BD00572A01 /* BreedsListViewController.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
 				A633377C25BCA09C00572A01 /* SceneDelegate.swift in Sources */,
 			);
@@ -300,14 +376,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A633377F25BCA09C00572A01 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A633378025BCA09C00572A01 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A633378725BCA09F00572A01 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Breeds/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Breeds/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Breeds/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Breeds/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
