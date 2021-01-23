@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Breeds
-//
-//  Created by joao.lucas.f.pereira on 23/01/21.
-//
-
 import UIKit
 import CoreData
 

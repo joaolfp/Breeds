@@ -15,6 +15,9 @@
 		A633379425BCA0A000572A01 /* BreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633379325BCA0A000572A01 /* BreedsTests.swift */; };
 		A633379F25BCA0A000572A01 /* BreedsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633379E25BCA0A000572A01 /* BreedsUITests.swift */; };
 		A63337C625BCA3BD00572A01 /* BreedsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337C525BCA3BD00572A01 /* BreedsListViewController.swift */; };
+		A63337D325BCA4BA00572A01 /* Coordinator+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337D225BCA4BA00572A01 /* Coordinator+Navigation.swift */; };
+		A63337DC25BCA4F200572A01 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337DB25BCA4F200572A01 /* Coordinator.swift */; };
+		A63337E125BCA54900572A01 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337E025BCA54900572A01 /* ViewCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A633379E25BCA0A000572A01 /* BreedsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsUITests.swift; sourceTree = "<group>"; };
 		A63337A025BCA0A000572A01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A63337C525BCA3BD00572A01 /* BreedsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewController.swift; sourceTree = "<group>"; };
+		A63337D225BCA4BA00572A01 /* Coordinator+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Navigation.swift"; sourceTree = "<group>"; };
+		A63337DB25BCA4F200572A01 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A63337E025BCA54900572A01 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,11 @@
 		A63337BA25BCA2E200572A01 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A63337CE25BCA46400572A01 /* Coordinator */,
+				A63337CF25BCA46A00572A01 /* Database */,
+				A63337CD25BCA45C00572A01 /* TabBar */,
+				A63337D025BCA46F00572A01 /* ViewCode */,
+				A63337D125BCA47400572A01 /* ViewsStates */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -206,6 +217,44 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A63337CD25BCA45C00572A01 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A63337CE25BCA46400572A01 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A63337D225BCA4BA00572A01 /* Coordinator+Navigation.swift */,
+				A63337DB25BCA4F200572A01 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A63337CF25BCA46A00572A01 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		A63337D025BCA46F00572A01 /* ViewCode */ = {
+			isa = PBXGroup;
+			children = (
+				A63337E025BCA54900572A01 /* ViewCode.swift */,
+			);
+			path = ViewCode;
+			sourceTree = "<group>";
+		};
+		A63337D125BCA47400572A01 /* ViewsStates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewsStates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +386,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A63337D325BCA4BA00572A01 /* Coordinator+Navigation.swift in Sources */,
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,
+				A63337DC25BCA4F200572A01 /* Coordinator.swift in Sources */,
+				A63337E125BCA54900572A01 /* ViewCode.swift in Sources */,
 				A63337C625BCA3BD00572A01 /* BreedsListViewController.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
 				A633377C25BCA09C00572A01 /* SceneDelegate.swift in Sources */,

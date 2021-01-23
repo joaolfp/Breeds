@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Breeds
-//
-//  Created by joao.lucas.f.pereira on 23/01/21.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
