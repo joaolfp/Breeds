@@ -2,6 +2,15 @@ import UIKit
 
 class BreedsView: UIView {
     
+    let pullToRefresh = UIRefreshControl()
+
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .large)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.color = .gray
+        return view
+    }()
+    
     lazy var breedsCollections: UICollectionView = {
         var flowLayout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
@@ -28,6 +37,8 @@ class BreedsView: UIView {
 extension BreedsView: ViewCode {
     func buildViewHierarchy() {
         addSubview(breedsCollections)
+        breedsCollections.addSubview(activityIndicator)
+        breedsCollections.refreshControl = pullToRefresh
     }
     
     func setupConstraints() {
@@ -35,7 +46,10 @@ extension BreedsView: ViewCode {
             breedsCollections.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             breedsCollections.leadingAnchor.constraint(equalTo: leadingAnchor),
             breedsCollections.trailingAnchor.constraint(equalTo: trailingAnchor),
-            breedsCollections.bottomAnchor.constraint(equalTo: bottomAnchor)
+            breedsCollections.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
     

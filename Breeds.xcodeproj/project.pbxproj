@@ -39,6 +39,10 @@
 		A633386425BCF12000572A01 /* Image+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386325BCF12000572A01 /* Image+Kingfisher.swift */; };
 		A633386A25BCF24700572A01 /* BreedsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386925BCF24700572A01 /* BreedsDataSource.swift */; };
 		A633387225BCF29100572A01 /* BreedsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633387125BCF29100572A01 /* BreedsViewCell.swift */; };
+		A633387C25BCFAAB00572A01 /* BreedsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633387B25BCFAAB00572A01 /* BreedsEndpoint.swift */; };
+		A633388525BCFC2700572A01 /* BreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633388425BCFC2700572A01 /* BreedsService.swift */; };
+		A633388D25BCFC5300572A01 /* BreedsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633388C25BCFC5300572A01 /* BreedsServiceProtocol.swift */; };
+		A633389225BCFC7600572A01 /* BreedsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633389125BCFC7600572A01 /* BreedsDTO.swift */; };
 		BD4095D30CCE249D7BB40B1B /* Pods_Breeds_BreedsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9148F98AA7046AF6EB062D82 /* Pods_Breeds_BreedsUITests.framework */; };
 		D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669DFF9495BBB1F9E188D19 /* Pods_Breeds.framework */; };
 		D6EF34A2B92A1780A8E48F91 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */; };
@@ -103,6 +107,10 @@
 		A633386325BCF12000572A01 /* Image+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Kingfisher.swift"; sourceTree = "<group>"; };
 		A633386925BCF24700572A01 /* BreedsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDataSource.swift; sourceTree = "<group>"; };
 		A633387125BCF29100572A01 /* BreedsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewCell.swift; sourceTree = "<group>"; };
+		A633387B25BCFAAB00572A01 /* BreedsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsEndpoint.swift; sourceTree = "<group>"; };
+		A633388425BCFC2700572A01 /* BreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsService.swift; sourceTree = "<group>"; };
+		A633388C25BCFC5300572A01 /* BreedsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsServiceProtocol.swift; sourceTree = "<group>"; };
+		A633389125BCFC7600572A01 /* BreedsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDTO.swift; sourceTree = "<group>"; };
 		B5C4AEBB5AE9720BA6EAE486 /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67983B89336B77153A1053 /* Pods-Breeds-BreedsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD7FC84A60304F771E69E79B /* Pods-Breeds-BreedsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +259,7 @@
 				A633384A25BCBDA800572A01 /* Endpoint */,
 				A633384425BCBD6400572A01 /* Extensions */,
 				A633383425BCBCAD00572A01 /* WebService */,
+				A633387B25BCFAAB00572A01 /* BreedsEndpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -262,6 +271,7 @@
 				A63337C225BCA35700572A01 /* Coordinator */,
 				A633386825BCF23000572A01 /* DataSource */,
 				A63337C325BCA35D00572A01 /* Model */,
+				A633388325BCFC1400572A01 /* Service */,
 				A63337C425BCA37400572A01 /* View */,
 			);
 			path = BreedsList;
@@ -286,6 +296,7 @@
 		A63337C325BCA35D00572A01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A633389125BCFC7600572A01 /* BreedsDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -432,6 +443,15 @@
 				A633386925BCF24700572A01 /* BreedsDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		A633388325BCFC1400572A01 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A633388425BCFC2700572A01 /* BreedsService.swift */,
+				A633388C25BCFC5300572A01 /* BreedsServiceProtocol.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		C5DED0BC985FB6A3AC55EA59 /* Pods */ = {
@@ -683,20 +703,24 @@
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,
 				A63337DC25BCA4F200572A01 /* Coordinator.swift in Sources */,
 				A633386A25BCF24700572A01 /* BreedsDataSource.swift in Sources */,
+				A633388D25BCFC5300572A01 /* BreedsServiceProtocol.swift in Sources */,
 				A633382025BCB4E300572A01 /* TabBarViewController.swift in Sources */,
 				A63337E125BCA54900572A01 /* ViewCode.swift in Sources */,
 				A63337F025BCA63E00572A01 /* UICollectionView+Identifiable.swift in Sources */,
 				A633383B25BCBCF700572A01 /* APIScheme.swift in Sources */,
 				A633381B25BCB43A00572A01 /* FavoritesCoordinator.swift in Sources */,
+				A633387C25BCFAAB00572A01 /* BreedsEndpoint.swift in Sources */,
 				A633382625BCBC1B00572A01 /* APIError.swift in Sources */,
 				A63337C625BCA3BD00572A01 /* BreedsListViewController.swift in Sources */,
 				A633384625BCBD7100572A01 /* Parameters+Utils.swift in Sources */,
 				A63337E825BCA5FC00572A01 /* Identifiable.swift in Sources */,
+				A633389225BCFC7600572A01 /* BreedsDTO.swift in Sources */,
 				A633380D25BCB24200572A01 /* BreedsListCoordinator.swift in Sources */,
 				A633385F25BCC4D300572A01 /* BreedsView.swift in Sources */,
 				A633386425BCF12000572A01 /* Image+Kingfisher.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
 				A633382B25BCBC3500572A01 /* APIClientProtocol.swift in Sources */,
+				A633388525BCFC2700572A01 /* BreedsService.swift in Sources */,
 				A633381625BCB40C00572A01 /* FavoritesViewController.swift in Sources */,
 				A633387225BCF29100572A01 /* BreedsViewCell.swift in Sources */,
 				A633377C25BCA09C00572A01 /* SceneDelegate.swift in Sources */,

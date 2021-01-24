@@ -2,20 +2,22 @@ import UIKit
 
 final class BreedsDataSource: NSObject, UICollectionViewDataSource {
     
-    let breedsCollections: UICollectionView
+    private let breedsCollections: UICollectionView
+    private var breedsList: [BreedsDTO]
     
-    init(breedsCollections: UICollectionView) {
+    init(breedsCollections: UICollectionView, breedsList: [BreedsDTO]) {
         self.breedsCollections = breedsCollections
+        self.breedsList = breedsList
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return breedsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = breedsCollections.addCell(for: indexPath, cellType: BreedsViewCell.self)
         
-        cell.photo.download(image: "https://cdn2.thedogapi.com/images/sqQJDtbpY.jpg")
+        cell.photo.download(image: breedsList[indexPath.row].image.url)
         
         return cell
     }
