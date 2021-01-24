@@ -37,6 +37,8 @@
 		A633385A25BCBF0600572A01 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A633385925BCBF0600572A01 /* Kingfisher */; };
 		A633385F25BCC4D300572A01 /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633385E25BCC4D300572A01 /* BreedsView.swift */; };
 		A633386425BCF12000572A01 /* Image+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386325BCF12000572A01 /* Image+Kingfisher.swift */; };
+		A633386A25BCF24700572A01 /* BreedsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386925BCF24700572A01 /* BreedsDataSource.swift */; };
+		A633387225BCF29100572A01 /* BreedsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633387125BCF29100572A01 /* BreedsViewCell.swift */; };
 		BD4095D30CCE249D7BB40B1B /* Pods_Breeds_BreedsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9148F98AA7046AF6EB062D82 /* Pods_Breeds_BreedsUITests.framework */; };
 		D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669DFF9495BBB1F9E188D19 /* Pods_Breeds.framework */; };
 		D6EF34A2B92A1780A8E48F91 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */; };
@@ -99,6 +101,8 @@
 		A633385025BCBE0700572A01 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
 		A633385E25BCC4D300572A01 /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
 		A633386325BCF12000572A01 /* Image+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Kingfisher.swift"; sourceTree = "<group>"; };
+		A633386925BCF24700572A01 /* BreedsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDataSource.swift; sourceTree = "<group>"; };
+		A633387125BCF29100572A01 /* BreedsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewCell.swift; sourceTree = "<group>"; };
 		B5C4AEBB5AE9720BA6EAE486 /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67983B89336B77153A1053 /* Pods-Breeds-BreedsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD7FC84A60304F771E69E79B /* Pods-Breeds-BreedsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 			children = (
 				A63337C125BCA35200572A01 /* Controller */,
 				A63337C225BCA35700572A01 /* Coordinator */,
+				A633386825BCF23000572A01 /* DataSource */,
 				A63337C325BCA35D00572A01 /* Model */,
 				A63337C425BCA37400572A01 /* View */,
 			);
@@ -289,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A633385E25BCC4D300572A01 /* BreedsView.swift */,
+				A633387125BCF29100572A01 /* BreedsViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +424,14 @@
 				A633384B25BCBDB500572A01 /* APIEndpointProtocol.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		A633386825BCF23000572A01 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A633386925BCF24700572A01 /* BreedsDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		C5DED0BC985FB6A3AC55EA59 /* Pods */ = {
@@ -668,6 +682,7 @@
 				A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */,
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,
 				A63337DC25BCA4F200572A01 /* Coordinator.swift in Sources */,
+				A633386A25BCF24700572A01 /* BreedsDataSource.swift in Sources */,
 				A633382025BCB4E300572A01 /* TabBarViewController.swift in Sources */,
 				A63337E125BCA54900572A01 /* ViewCode.swift in Sources */,
 				A63337F025BCA63E00572A01 /* UICollectionView+Identifiable.swift in Sources */,
@@ -683,6 +698,7 @@
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
 				A633382B25BCBC3500572A01 /* APIClientProtocol.swift in Sources */,
 				A633381625BCB40C00572A01 /* FavoritesViewController.swift in Sources */,
+				A633387225BCF29100572A01 /* BreedsViewCell.swift in Sources */,
 				A633377C25BCA09C00572A01 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

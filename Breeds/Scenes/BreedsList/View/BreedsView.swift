@@ -7,6 +7,10 @@ class BreedsView: UIView {
         flowLayout.scrollDirection = .vertical
             
         let collection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collection.backgroundColor = .white
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.backgroundColor = .black
+        collection.registerCell(cellType: BreedsViewCell.self)
         return collection
     }()
     
@@ -29,8 +33,8 @@ extension BreedsView: ViewCode {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             breedsCollections.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            breedsCollections.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            breedsCollections.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            breedsCollections.leadingAnchor.constraint(equalTo: leadingAnchor),
+            breedsCollections.trailingAnchor.constraint(equalTo: trailingAnchor),
             breedsCollections.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
