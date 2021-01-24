@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,9 @@
 		A633384625BCBD7100572A01 /* Parameters+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633384525BCBD7100572A01 /* Parameters+Utils.swift */; };
 		A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633384B25BCBDB500572A01 /* APIEndpointProtocol.swift */; };
 		A633385125BCBE0700572A01 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633385025BCBE0700572A01 /* URL+Utils.swift */; };
+		A633385A25BCBF0600572A01 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A633385925BCBF0600572A01 /* Kingfisher */; };
+		A633385F25BCC4D300572A01 /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633385E25BCC4D300572A01 /* BreedsView.swift */; };
+		A633386425BCF12000572A01 /* Image+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386325BCF12000572A01 /* Image+Kingfisher.swift */; };
 		BD4095D30CCE249D7BB40B1B /* Pods_Breeds_BreedsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9148F98AA7046AF6EB062D82 /* Pods_Breeds_BreedsUITests.framework */; };
 		D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669DFF9495BBB1F9E188D19 /* Pods_Breeds.framework */; };
 		D6EF34A2B92A1780A8E48F91 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */; };
@@ -94,6 +97,8 @@
 		A633384525BCBD7100572A01 /* Parameters+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parameters+Utils.swift"; sourceTree = "<group>"; };
 		A633384B25BCBDB500572A01 /* APIEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpointProtocol.swift; sourceTree = "<group>"; };
 		A633385025BCBE0700572A01 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
+		A633385E25BCC4D300572A01 /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
+		A633386325BCF12000572A01 /* Image+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Kingfisher.swift"; sourceTree = "<group>"; };
 		B5C4AEBB5AE9720BA6EAE486 /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67983B89336B77153A1053 /* Pods-Breeds-BreedsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD7FC84A60304F771E69E79B /* Pods-Breeds-BreedsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A633385A25BCBF0600572A01 /* Kingfisher in Frameworks */,
 				D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +288,7 @@
 		A63337C425BCA37400572A01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A633385E25BCC4D300572A01 /* BreedsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,6 +338,7 @@
 				A63337E725BCA5FC00572A01 /* Identifiable.swift */,
 				A63337EF25BCA63E00572A01 /* UICollectionView+Identifiable.swift */,
 				A63337F425BCA69B00572A01 /* UITableView+Identifiable.swift */,
+				A633386325BCF12000572A01 /* Image+Kingfisher.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -443,6 +451,9 @@
 			dependencies = (
 			);
 			name = Breeds;
+			packageProductDependencies = (
+				A633385925BCBF0600572A01 /* Kingfisher */,
+			);
 			productName = Breeds;
 			productReference = A633377625BCA09C00572A01 /* Breeds.app */;
 			productType = "com.apple.product-type.application";
@@ -516,6 +527,9 @@
 				Base,
 			);
 			mainGroup = A633376D25BCA09C00572A01;
+			packageReferences = (
+				A633385825BCBF0600572A01 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = A633377725BCA09C00572A01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -664,6 +678,8 @@
 				A633384625BCBD7100572A01 /* Parameters+Utils.swift in Sources */,
 				A63337E825BCA5FC00572A01 /* Identifiable.swift in Sources */,
 				A633380D25BCB24200572A01 /* BreedsListCoordinator.swift in Sources */,
+				A633385F25BCC4D300572A01 /* BreedsView.swift in Sources */,
+				A633386425BCF12000572A01 /* Image+Kingfisher.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
 				A633382B25BCBC3500572A01 /* APIClientProtocol.swift in Sources */,
 				A633381625BCB40C00572A01 /* FavoritesViewController.swift in Sources */,
@@ -992,6 +1008,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A633385825BCBF0600572A01 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A633385925BCBF0600572A01 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A633385825BCBF0600572A01 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A633378225BCA09C00572A01 /* Breeds.xcdatamodeld */ = {
