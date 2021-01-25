@@ -10,7 +10,7 @@ final class BreedsListCoordinator: Coordinator {
     }
     
     func start(with navigationType: NavigationType) -> UIViewController {
-        let breedsListViewController = BreedsListViewController()
+        let breedsListViewController = BreedsListViewController(service: BreedsService())
         breedsListViewController.tabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.dash"), tag: 0)
         breedsListViewController.title = "Breeds"
         show(breedsListViewController, with: navigationType)
