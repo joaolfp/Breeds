@@ -51,7 +51,7 @@ final class BreedsListViewController: UIViewController {
     
     @objc
     func fetchBreeds(sender: UIRefreshControl) {
-        BreedsService().getBreadsList { [weak self] result in
+        service.getBreadsList { [weak self] result in
             self?.breedsView.pullToRefresh.endRefreshing()
             self?.breedsView.activityIndicator.stopAnimating()
             switch result {

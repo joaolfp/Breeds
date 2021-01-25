@@ -5,14 +5,14 @@ enum APIError: Error {
     case jsonConversionFailure
     case responseUnsuccessful
     case invalidData
-    case jsonParsinFailure
+    case jsonParsingFailure
     case requestCancelled
     
     var localizedDescription: String {
         switch self {
         case .requestFailed(let reason):
             return "Request Failed: \(reason ?? "unknown")"
-        case .jsonParsinFailure:
+        case .jsonParsingFailure:
             return "JSON parsing failure"
         case .jsonConversionFailure:
             return "JSON conversion failure"
