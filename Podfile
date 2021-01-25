@@ -7,6 +7,7 @@ target 'Breeds' do
 
   # Pods for Breeds
   pod 'SwiftLint'
+  pod 'Kingfisher'
 
   target 'BreedsTests' do
     inherit! :search_paths
