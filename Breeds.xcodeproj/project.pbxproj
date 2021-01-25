@@ -47,6 +47,7 @@
 		A63338B525BE69F800572A01 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338B425BE69F800572A01 /* JsonHelper.swift */; };
 		A63338BD25BE6A3800572A01 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338BC25BE6A3800572A01 /* APIClientMock.swift */; };
 		A63338CA25BE6CF200572A01 /* BreedsServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338C925BE6CF200572A01 /* BreedsServiceSpec.swift */; };
+		A63338CF25BE705100572A01 /* BreedsListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */; };
 		BD4095D30CCE249D7BB40B1B /* Pods_Breeds_BreedsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9148F98AA7046AF6EB062D82 /* Pods_Breeds_BreedsUITests.framework */; };
 		D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669DFF9495BBB1F9E188D19 /* Pods_Breeds.framework */; };
 		D6EF34A2B92A1780A8E48F91 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */; };
@@ -119,6 +120,7 @@
 		A63338B425BE69F800572A01 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		A63338BC25BE6A3800572A01 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		A63338C925BE6CF200572A01 /* BreedsServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsServiceSpec.swift; sourceTree = "<group>"; };
+		A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewControllerSpec.swift; sourceTree = "<group>"; };
 		B5C4AEBB5AE9720BA6EAE486 /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67983B89336B77153A1053 /* Pods-Breeds-BreedsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD7FC84A60304F771E69E79B /* Pods-Breeds-BreedsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 		A63338A725BE682900572A01 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 			files = (
 				A63338BD25BE6A3800572A01 /* APIClientMock.swift in Sources */,
 				A633379425BCA0A000572A01 /* BreedsTests.swift in Sources */,
+				A63338CF25BE705100572A01 /* BreedsListViewControllerSpec.swift in Sources */,
 				A63338B525BE69F800572A01 /* JsonHelper.swift in Sources */,
 				A63338CA25BE6CF200572A01 /* BreedsServiceSpec.swift in Sources */,
 			);

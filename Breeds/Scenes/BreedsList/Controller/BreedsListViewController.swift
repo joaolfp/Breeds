@@ -3,12 +3,12 @@ import NVActivityIndicatorView
 
 final class BreedsListViewController: UIViewController {
     
-    private let breedsView = BreedsView()
-    private(set) var breedsList = [BreedsDTO]()
+    let breedsView = BreedsView()
+    var breedsList = [BreedsDTO]()
     private var activityView: UIActivityIndicatorView?
     private var service = BreedsService()
     
-    private var dataSource: BreedsDataSource? {
+    private(set) var dataSource: BreedsDataSource? {
         didSet {
             guard let dataSource = dataSource else { return }
             
@@ -16,16 +16,6 @@ final class BreedsListViewController: UIViewController {
             breedsView.breedsCollections.delegate = dataSource
             breedsView.breedsCollections.reloadData()
         }
-    }
-    
-    init(service: BreedsService) {
-        self.service = service
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func loadView() {
