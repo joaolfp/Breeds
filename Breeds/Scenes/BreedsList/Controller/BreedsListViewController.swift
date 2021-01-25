@@ -1,5 +1,4 @@
 import UIKit
-import NVActivityIndicatorView
 
 final class BreedsListViewController: UIViewController {
     
