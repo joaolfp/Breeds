@@ -33,7 +33,6 @@ final class BreedsListViewController: UIViewController {
     
     private func setupLoading() {
         breedsView.pullToRefresh.addTarget(self, action: #selector(fetchBreeds(sender:)), for: .valueChanged)
-
         breedsView.activityIndicator.startAnimating()
         fetchBreeds(sender: breedsView.pullToRefresh)
     }
