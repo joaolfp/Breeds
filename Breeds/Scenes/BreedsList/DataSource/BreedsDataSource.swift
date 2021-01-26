@@ -2,8 +2,8 @@ import UIKit
 
 final class BreedsDataSource: NSObject, UICollectionViewDataSource {
     
-    private let breedsCollections: UICollectionView
-    private var breedsList: [BreedsDTO]
+    let breedsCollections: UICollectionView
+    var breedsList: [BreedsDTO]
     
     init(breedsCollections: UICollectionView, breedsList: [BreedsDTO]) {
         self.breedsCollections = breedsCollections
