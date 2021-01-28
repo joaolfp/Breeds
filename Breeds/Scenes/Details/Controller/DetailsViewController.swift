@@ -1,10 +1,3 @@
-//
-//  DetailsViewController.swift
-//  Breeds
-//
-//  Created by joao.lucas.f.pereira on 28/01/21.
-//
-
 import UIKit
 
 final class DetailsViewController: UIViewController {
