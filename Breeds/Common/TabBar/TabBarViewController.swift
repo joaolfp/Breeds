@@ -10,8 +10,8 @@ final class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         viewControllers = [
-            BreedsListCoordinator(navigationController: navigationController()).start(with: .root),
-            FavoritesCoordinator(navigationController: navigationController()).start(with: .root)
+            BreedsListCoordinator(navigationController: navigationController()).start(),
+            FavoritesCoordinator(navigationController: navigationController()).start()
         ]
         tabBar.barTintColor = .yellow
         tabBar.tintColor = .black

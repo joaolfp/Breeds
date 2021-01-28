@@ -9,11 +9,11 @@ final class FavoritesCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func start(with navigationType: NavigationType) -> UIViewController {
+    func start() -> UIViewController {
         let favoritesViewController = FavoritesViewController()
         favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "heart"), tag: 1)
         favoritesViewController.title = "Favorites"
-        show(favoritesViewController, with: navigationType)
+        navigationController.pushViewController(favoritesViewController, animated: true)
         return navigationController
     }
 }
