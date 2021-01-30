@@ -23,5 +23,6 @@ final class DetailsViewController: UIViewController {
     private func setupBreedsItems() {
         guard let imageUrl = breedsItems?.image.url else { return }
         detailsView.photo.download(image: imageUrl)
+        detailsView.descriptionPet.text = breedsItems?.description ?? Identifier.String.notDescription
     }
 }

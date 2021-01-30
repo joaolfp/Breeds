@@ -5,14 +5,14 @@ protocol BreedsListDelegate: AnyObject {
 }
 
 final class BreedsListCoordinator: Coordinator {
-    var currentViewController: UIViewController?
-    
+
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
+    @discardableResult
     func start() -> UIViewController {
         let breedsListViewController = BreedsListViewController()
         breedsListViewController.tabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.dash"), tag: 0)

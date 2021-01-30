@@ -1,8 +1,7 @@
 import UIKit
 
 final class FavoritesCoordinator: Coordinator {
-    var currentViewController: UIViewController?
-    
+
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {

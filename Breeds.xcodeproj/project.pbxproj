@@ -49,6 +49,7 @@
 		A63338E025C07B9D00572A01 /* BreedsDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */; };
 		A69DD72625C2700600AC86FE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DD72525C2700600AC86FE /* DetailsViewController.swift */; };
 		A6A25D2125C457B8001A0630 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A25D2025C457B8001A0630 /* DetailsView.swift */; };
+		A6AA2D5B25C48D7D005FFABE /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D5A25C48D7D005FFABE /* Identifier.swift */; };
 		BD4095D30CCE249D7BB40B1B /* Pods_Breeds_BreedsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9148F98AA7046AF6EB062D82 /* Pods_Breeds_BreedsUITests.framework */; };
 		D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669DFF9495BBB1F9E188D19 /* Pods_Breeds.framework */; };
 		D6EF34A2B92A1780A8E48F91 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */; };
@@ -124,6 +125,7 @@
 		A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDataSourceSpec.swift; sourceTree = "<group>"; };
 		A69DD72525C2700600AC86FE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A6A25D2025C457B8001A0630 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		A6AA2D5A25C48D7D005FFABE /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		B5C4AEBB5AE9720BA6EAE486 /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67983B89336B77153A1053 /* Pods-Breeds-BreedsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD7FC84A60304F771E69E79B /* Pods-Breeds-BreedsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 		A63337E625BCA5CF00572A01 /* Identifier */ = {
 			isa = PBXGroup;
 			children = (
+				A6AA2D5A25C48D7D005FFABE /* Identifier.swift */,
 			);
 			path = Identifier;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				A633384025BCBD1D00572A01 /* APIMethod.swift in Sources */,
 				A633383025BCBC6C00572A01 /* APIClient.swift in Sources */,
 				A63337F525BCA69B00572A01 /* UITableView+Identifiable.swift in Sources */,
+				A6AA2D5B25C48D7D005FFABE /* Identifier.swift in Sources */,
 				A633383625BCBCC800572A01 /* APIStatusCode.swift in Sources */,
 				A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */,
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,
@@ -1062,7 +1066,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BreedsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1084,7 +1088,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BreedsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
