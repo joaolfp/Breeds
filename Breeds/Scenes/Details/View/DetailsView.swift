@@ -31,6 +31,15 @@ class DetailsView: UIView {
         return label
     }()
     
+    lazy var lifeSpan: UILabel = {
+        var label = UILabel()
+        label.textColor = .white
+        label.backgroundColor = .blue
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        return label
+    }()
+    
     private lazy var stackContentView: UIStackView = {
         var stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -59,6 +68,7 @@ extension DetailsView: ViewCode {
         
         stackContentView.addArrangedSubview(photo)
         stackContentView.addArrangedSubview(descriptionPet)
+        stackContentView.addArrangedSubview(lifeSpan)
     }
     
     func setupConstraints() {
@@ -78,7 +88,7 @@ extension DetailsView: ViewCode {
             stackContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             stackContentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             stackContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            stackContentView.heightAnchor.constraint(equalTo: contentView.heightAnchor)
+            stackContentView.heightAnchor.constraint(equalTo: contentView.heightAnchor, constant: -16)
         ])
     }
     

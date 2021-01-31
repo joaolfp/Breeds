@@ -24,5 +24,6 @@ final class DetailsViewController: UIViewController {
         guard let imageUrl = breedsItems?.image.url else { return }
         detailsView.photo.download(image: imageUrl)
         detailsView.descriptionPet.text = breedsItems?.description ?? Identifier.String.notDescription
+        detailsView.lifeSpan.text = "\(Identifier.String.lifeSpan)\(breedsItems?.life_span ?? "")"
     }
 }
