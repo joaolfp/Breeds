@@ -32,11 +32,32 @@ class DetailsView: UIView {
     }()
     
     lazy var lifeSpan: UILabel = {
-        var label = UILabel()
+        var label = PaddingLabel(top: 8, bottom: 8, left: 8, right: 8)
         label.textColor = .white
         label.backgroundColor = .blue
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        label.layer.cornerRadius = 8
+        label.clipsToBounds = true
+        return label
+    }()
+    
+    lazy var weight: UILabel = {
+        var label = PaddingLabel(top: 8, bottom: 8, left: 8, right: 8)
+        label.textColor = .white
+        label.backgroundColor = .red
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.layer.cornerRadius = 8
+        label.clipsToBounds = true
+        return label
+    }()
+    
+    lazy var height: UILabel = {
+        var label = PaddingLabel(top: 8, bottom: 8, left: 8, right: 8)
+        label.textColor = .white
+        label.backgroundColor = .systemGreen
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.layer.cornerRadius = 8
+        label.clipsToBounds = true
         return label
     }()
     
@@ -69,6 +90,8 @@ extension DetailsView: ViewCode {
         stackContentView.addArrangedSubview(photo)
         stackContentView.addArrangedSubview(descriptionPet)
         stackContentView.addArrangedSubview(lifeSpan)
+        stackContentView.addArrangedSubview(weight)
+        stackContentView.addArrangedSubview(height)
     }
     
     func setupConstraints() {

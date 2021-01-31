@@ -5,6 +5,7 @@ disabled_rules:
   - trailing_whitespace
   - force_cast
   - colon
+  - implicit_getter
 
 opt_in_rules:
   - empty_count

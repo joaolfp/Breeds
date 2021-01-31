@@ -24,6 +24,8 @@ final class DetailsViewController: UIViewController {
         guard let imageUrl = breedsItems?.image.url else { return }
         detailsView.photo.download(image: imageUrl)
         detailsView.descriptionPet.text = breedsItems?.description ?? Identifier.String.notDescription
-        detailsView.lifeSpan.text = "\(Identifier.String.lifeSpan)\(breedsItems?.life_span ?? "")"
+        detailsView.lifeSpan.text = "\(Identifier.String.lifeSpan) \(breedsItems?.life_span ?? "")"
+        detailsView.weight.text = "\(Identifier.String.weight) \(breedsItems?.weight.metric ?? "") / \(breedsItems?.weight.imperial ?? "")"
+        detailsView.height.text = "\(Identifier.String.height) \(breedsItems?.height.metric ?? "") / \(breedsItems?.height.imperial ?? "")"
     }
 }
