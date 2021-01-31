@@ -2,7 +2,7 @@ import UIKit
 
 final class DetailsViewController: UIViewController {
     
-    private var detailsView = DetailsView()
+    var detailsView = DetailsView()
     var breedsItems: BreedsDTO?
     
     override func loadView() {
@@ -14,6 +14,7 @@ final class DetailsViewController: UIViewController {
         
         setupNavigationController()
         setupBreedsItems()
+        setupFavoriteTap()
     }
     
     private func setupNavigationController() {

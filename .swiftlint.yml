@@ -6,6 +6,7 @@ disabled_rules:
   - force_cast
   - colon
   - implicit_getter
+  - void_return
 
 opt_in_rules:
   - empty_count

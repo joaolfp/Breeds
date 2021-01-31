@@ -2,6 +2,8 @@ import UIKit
 
 class DetailsView: UIView {
     
+    var didPressButton: ((UIButton) -> ())?
+    
     private lazy var scrollView: UIScrollView = {
         var scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,6 +63,20 @@ class DetailsView: UIView {
         return label
     }()
     
+    lazy var favorite: UIButton = {
+        var button = UIButton(type: .system)
+        button.setTitle(Identifier.String.addFavorites, for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.backgroundColor = .white
+        button.addTarget(self, action: #selector(DetailsView.pressedFavorite), for: .touchUpInside)
+        button.layer.cornerRadius = 12
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.lightGray.cgColor
+        button.clipsToBounds = true
+        button.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        return button
+    }()
+
     private lazy var stackContentView: UIStackView = {
         var stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -76,6 +92,11 @@ class DetailsView: UIView {
         lifeSpan.text = "\(Identifier.String.lifeSpan) \(breedsItems?.life_span ?? "")"
         weight.text = "\(Identifier.String.weight) \(breedsItems?.weight.metric ?? "") / \(breedsItems?.weight.imperial ?? "")"
         height.text = "\(Identifier.String.height) \(breedsItems?.height.metric ?? "") / \(breedsItems?.height.imperial ?? "")"
+    }
+    
+    @objc
+    func pressedFavorite(sender: UIButton) {
+        didPressButton?(favorite)
     }
 
     override init(frame: CGRect) {
@@ -96,6 +117,7 @@ extension DetailsView: ViewCode {
         contentView.addSubview(stackContentView)
         
         stackContentView.addArrangedSubview(photo)
+        stackContentView.addArrangedSubview(favorite)
         stackContentView.addArrangedSubview(descriptionPet)
         stackContentView.addArrangedSubview(lifeSpan)
         stackContentView.addArrangedSubview(weight)
@@ -110,16 +132,16 @@ extension DetailsView: ViewCode {
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
             scrollView.widthAnchor.constraint(equalTo: widthAnchor),
             
-            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
-            stackContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            stackContentView.topAnchor.constraint(equalTo: contentView.topAnchor),
             stackContentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             stackContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            stackContentView.heightAnchor.constraint(equalTo: contentView.heightAnchor, constant: -16)
+            stackContentView.heightAnchor.constraint(equalTo: contentView.heightAnchor)
         ])
     }
     
