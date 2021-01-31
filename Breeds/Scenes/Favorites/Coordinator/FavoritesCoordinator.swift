@@ -12,7 +12,7 @@ final class FavoritesCoordinator: Coordinator {
         let favoritesViewController = FavoritesViewController()
         favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "heart"), tag: 1)
         favoritesViewController.title = "Favorites"
-        navigationController.pushViewController(favoritesViewController, animated: true)
+        show(favoritesViewController, with: .push)
         return navigationController
     }
 }

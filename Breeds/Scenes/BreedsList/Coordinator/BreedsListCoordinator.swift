@@ -18,7 +18,7 @@ final class BreedsListCoordinator: Coordinator {
         breedsListViewController.tabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.dash"), tag: 0)
         breedsListViewController.title = "Breeds"
         breedsListViewController.coordinator = self
-        navigationController.pushViewController(breedsListViewController, animated: true)
+        show(breedsListViewController, with: .push)
         return navigationController
     }
 }
@@ -27,6 +27,6 @@ extension BreedsListCoordinator: BreedsListDelegate {
     func didSelectedBreed(_ selectedBreed: BreedsDTO) {
         let detailsViewController = DetailsViewController()
         detailsViewController.breedsItems = selectedBreed
-        navigationController.pushViewController(detailsViewController, animated: true)
+        show(detailsViewController, with: .push)
     }
 }
