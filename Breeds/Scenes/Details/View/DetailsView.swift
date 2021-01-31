@@ -69,6 +69,14 @@ class DetailsView: UIView {
         stack.distribution = .fill
         return stack
     }()
+    
+    func addItems(breedsItems: BreedsDTO?) {
+        photo.download(image: breedsItems?.image.url ?? "")
+        descriptionPet.text = breedsItems?.description ?? Identifier.String.notDescription
+        lifeSpan.text = "\(Identifier.String.lifeSpan) \(breedsItems?.life_span ?? "")"
+        weight.text = "\(Identifier.String.weight) \(breedsItems?.weight.metric ?? "") / \(breedsItems?.weight.imperial ?? "")"
+        height.text = "\(Identifier.String.height) \(breedsItems?.height.metric ?? "") / \(breedsItems?.height.imperial ?? "")"
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)

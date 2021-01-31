@@ -1,6 +1,6 @@
 import UIKit
 
-class PaddingLabel: UILabel {
+final class PaddingLabel: UILabel {
 
     var topInset: CGFloat
     var bottomInset: CGFloat
