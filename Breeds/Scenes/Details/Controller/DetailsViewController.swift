@@ -2,7 +2,7 @@ import UIKit
 
 final class DetailsViewController: UIViewController {
     
-    private(set) var detailsView = DetailsView()
+    private var detailsView = DetailsView()
     var breedsItems: BreedsDTO?
     
     override func loadView() {
