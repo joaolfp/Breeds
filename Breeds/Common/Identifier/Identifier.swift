@@ -9,4 +9,8 @@ struct Identifier {
         static var addFavorites = "♡ ADD TO FAVORITES"
         static var removeFavorites = "♡ REMOVE TO FAVORITES"
     }
+    
+    struct Database {
+        static var entityName = "BreedEntity"
+    }
 }

@@ -4,6 +4,7 @@ final class DetailsViewController: UIViewController {
     
     var detailsView = DetailsView()
     var breedsItems: BreedsDTO?
+    var databaseManager = DatabaseManager()
     
     override func loadView() {
         view = detailsView
@@ -15,6 +16,7 @@ final class DetailsViewController: UIViewController {
         setupNavigationController()
         setupBreedsItems()
         setupFavoriteTap()
+        setupStatusFavorites()
     }
     
     private func setupNavigationController() {

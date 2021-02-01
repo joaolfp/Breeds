@@ -149,3 +149,18 @@ extension DetailsView: ViewCode {
         backgroundColor = .white
     }
 }
+
+// MARK: - Status favorites button
+extension DetailsView {
+    func buttonRemoveFavorite() {
+        favorite.setTitle(Identifier.String.removeFavorites, for: .normal)
+        favorite.setTitleColor(.white, for: .normal)
+        favorite.backgroundColor = .red
+    }
+    
+    func buttonAddFavorite() {
+        favorite.setTitle(Identifier.String.addFavorites, for: .normal)
+        favorite.setTitleColor(.red, for: .normal)
+        favorite.backgroundColor = .white
+    }
+}
