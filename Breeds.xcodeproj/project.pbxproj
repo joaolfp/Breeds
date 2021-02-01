@@ -15,7 +15,6 @@
 		A633379425BCA0A000572A01 /* BreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633379325BCA0A000572A01 /* BreedsTests.swift */; };
 		A633379F25BCA0A000572A01 /* BreedsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633379E25BCA0A000572A01 /* BreedsUITests.swift */; };
 		A63337C625BCA3BD00572A01 /* BreedsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337C525BCA3BD00572A01 /* BreedsListViewController.swift */; };
-		A63337D325BCA4BA00572A01 /* Coordinator+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337D225BCA4BA00572A01 /* Coordinator+Navigation.swift */; };
 		A63337DC25BCA4F200572A01 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337DB25BCA4F200572A01 /* Coordinator.swift */; };
 		A63337E125BCA54900572A01 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337E025BCA54900572A01 /* ViewCode.swift */; };
 		A63337E825BCA5FC00572A01 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63337E725BCA5FC00572A01 /* Identifiable.swift */; };
@@ -48,6 +47,13 @@
 		A63338CA25BE6CF200572A01 /* BreedsServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338C925BE6CF200572A01 /* BreedsServiceSpec.swift */; };
 		A63338CF25BE705100572A01 /* BreedsListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */; };
 		A63338E025C07B9D00572A01 /* BreedsDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */; };
+		A69DD72625C2700600AC86FE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DD72525C2700600AC86FE /* DetailsViewController.swift */; };
+		A6A25D2125C457B8001A0630 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A25D2025C457B8001A0630 /* DetailsView.swift */; };
+		A6AA2D5B25C48D7D005FFABE /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D5A25C48D7D005FFABE /* Identifier.swift */; };
+		A6AA2D6125C63E84005FFABE /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D6025C63E84005FFABE /* PaddingLabel.swift */; };
+		A6AA2D7525C644E6005FFABE /* PaddingLabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D7425C644E6005FFABE /* PaddingLabelSpec.swift */; };
+		A6AA2D7E25C75804005FFABE /* DetailsViewController+Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D7D25C75804005FFABE /* DetailsViewController+Favorites.swift */; };
+		A6AA2D8625C82AB4005FFABE /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D8525C82AB4005FFABE /* DatabaseManager.swift */; };
 		BD4095D30CCE249D7BB40B1B /* Pods_Breeds_BreedsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9148F98AA7046AF6EB062D82 /* Pods_Breeds_BreedsUITests.framework */; };
 		D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669DFF9495BBB1F9E188D19 /* Pods_Breeds.framework */; };
 		D6EF34A2B92A1780A8E48F91 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */; };
@@ -89,7 +95,6 @@
 		A633379E25BCA0A000572A01 /* BreedsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsUITests.swift; sourceTree = "<group>"; };
 		A63337A025BCA0A000572A01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A63337C525BCA3BD00572A01 /* BreedsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewController.swift; sourceTree = "<group>"; };
-		A63337D225BCA4BA00572A01 /* Coordinator+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Navigation.swift"; sourceTree = "<group>"; };
 		A63337DB25BCA4F200572A01 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A63337E025BCA54900572A01 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		A63337E725BCA5FC00572A01 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -122,6 +127,13 @@
 		A63338C925BE6CF200572A01 /* BreedsServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsServiceSpec.swift; sourceTree = "<group>"; };
 		A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewControllerSpec.swift; sourceTree = "<group>"; };
 		A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDataSourceSpec.swift; sourceTree = "<group>"; };
+		A69DD72525C2700600AC86FE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A6A25D2025C457B8001A0630 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		A6AA2D5A25C48D7D005FFABE /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		A6AA2D6025C63E84005FFABE /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		A6AA2D7425C644E6005FFABE /* PaddingLabelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabelSpec.swift; sourceTree = "<group>"; };
+		A6AA2D7D25C75804005FFABE /* DetailsViewController+Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsViewController+Favorites.swift"; sourceTree = "<group>"; };
+		A6AA2D8525C82AB4005FFABE /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B5C4AEBB5AE9720BA6EAE486 /* Pods-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67983B89336B77153A1053 /* Pods-Breeds-BreedsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD7FC84A60304F771E69E79B /* Pods-Breeds-BreedsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsUITests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +217,7 @@
 		A633379225BCA0A000572A01 /* BreedsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6AA2D6825C644BD005FFABE /* Library */,
 				A63338DE25C07B1E00572A01 /* DataSource */,
 				A63338B325BE69B700572A01 /* Helper */,
 				A63338A925BE684700572A01 /* Service */,
@@ -249,9 +262,10 @@
 			isa = PBXGroup;
 			children = (
 				A63337CE25BCA46400572A01 /* Coordinator */,
-				A63337CF25BCA46A00572A01 /* Database */,
+				A63337CF25BCA46A00572A01 /* CoreData */,
 				A63337E525BCA5BC00572A01 /* Extensions */,
 				A63337E625BCA5CF00572A01 /* Identifier */,
+				A6AA2D5F25C63E70005FFABE /* Library */,
 				A63337CD25BCA45C00572A01 /* TabBar */,
 				A63337D025BCA46F00572A01 /* ViewCode */,
 				A63337D125BCA47400572A01 /* ViewsStates */,
@@ -262,6 +276,7 @@
 		A63337BB25BCA2EE00572A01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A69DD72425C26FDA00AC86FE /* Details */,
 				A633381125BCB3B700572A01 /* Favorites */,
 				A63337C025BCA34400572A01 /* BreedsList */,
 			);
@@ -337,17 +352,17 @@
 		A63337CE25BCA46400572A01 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				A63337D225BCA4BA00572A01 /* Coordinator+Navigation.swift */,
 				A63337DB25BCA4F200572A01 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		A63337CF25BCA46A00572A01 /* Database */ = {
+		A63337CF25BCA46A00572A01 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A6AA2D8525C82AB4005FFABE /* DatabaseManager.swift */,
 			);
-			path = Database;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		A63337D025BCA46F00572A01 /* ViewCode */ = {
@@ -379,6 +394,7 @@
 		A63337E625BCA5CF00572A01 /* Identifier */ = {
 			isa = PBXGroup;
 			children = (
+				A6AA2D5A25C48D7D005FFABE /* Identifier.swift */,
 			);
 			path = Identifier;
 			sourceTree = "<group>";
@@ -516,6 +532,56 @@
 				A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		A69DD72425C26FDA00AC86FE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A69DD73125C2701A00AC86FE /* View */,
+				A69DD72D25C2701400AC86FE /* Controller */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		A69DD72D25C2701400AC86FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A6AA2D7C25C757F5005FFABE /* Extensions */,
+				A69DD72525C2700600AC86FE /* DetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A69DD73125C2701A00AC86FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6A25D2025C457B8001A0630 /* DetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A6AA2D5F25C63E70005FFABE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A6AA2D6025C63E84005FFABE /* PaddingLabel.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A6AA2D6825C644BD005FFABE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A6AA2D7425C644E6005FFABE /* PaddingLabelSpec.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A6AA2D7C25C757F5005FFABE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A6AA2D7D25C75804005FFABE /* DetailsViewController+Favorites.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C5DED0BC985FB6A3AC55EA59 /* Pods */ = {
@@ -788,20 +854,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A63337D325BCA4BA00572A01 /* Coordinator+Navigation.swift in Sources */,
 				A633385125BCBE0700572A01 /* URL+Utils.swift in Sources */,
 				A633384025BCBD1D00572A01 /* APIMethod.swift in Sources */,
 				A633383025BCBC6C00572A01 /* APIClient.swift in Sources */,
 				A63337F525BCA69B00572A01 /* UITableView+Identifiable.swift in Sources */,
+				A6AA2D5B25C48D7D005FFABE /* Identifier.swift in Sources */,
 				A633383625BCBCC800572A01 /* APIStatusCode.swift in Sources */,
 				A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */,
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,
+				A6AA2D8625C82AB4005FFABE /* DatabaseManager.swift in Sources */,
 				A63337DC25BCA4F200572A01 /* Coordinator.swift in Sources */,
 				A633386A25BCF24700572A01 /* BreedsDataSource.swift in Sources */,
 				A633388D25BCFC5300572A01 /* BreedsServiceProtocol.swift in Sources */,
 				A633382025BCB4E300572A01 /* TabBarViewController.swift in Sources */,
 				A63337E125BCA54900572A01 /* ViewCode.swift in Sources */,
 				A63337F025BCA63E00572A01 /* UICollectionView+Identifiable.swift in Sources */,
+				A6AA2D7E25C75804005FFABE /* DetailsViewController+Favorites.swift in Sources */,
+				A6A25D2125C457B8001A0630 /* DetailsView.swift in Sources */,
 				A633383B25BCBCF700572A01 /* APIScheme.swift in Sources */,
 				A633381B25BCB43A00572A01 /* FavoritesCoordinator.swift in Sources */,
 				A633387C25BCFAAB00572A01 /* BreedsEndpoint.swift in Sources */,
@@ -815,6 +884,8 @@
 				A633386425BCF12000572A01 /* Image+Kingfisher.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
 				A633382B25BCBC3500572A01 /* APIClientProtocol.swift in Sources */,
+				A6AA2D6125C63E84005FFABE /* PaddingLabel.swift in Sources */,
+				A69DD72625C2700600AC86FE /* DetailsViewController.swift in Sources */,
 				A633388525BCFC2700572A01 /* BreedsService.swift in Sources */,
 				A633381625BCB40C00572A01 /* FavoritesViewController.swift in Sources */,
 				A633387225BCF29100572A01 /* BreedsViewCell.swift in Sources */,
@@ -827,6 +898,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63338BD25BE6A3800572A01 /* APIClientMock.swift in Sources */,
+				A6AA2D7525C644E6005FFABE /* PaddingLabelSpec.swift in Sources */,
 				A63338E025C07B9D00572A01 /* BreedsDataSourceSpec.swift in Sources */,
 				A633379425BCA0A000572A01 /* BreedsTests.swift in Sources */,
 				A63338CF25BE705100572A01 /* BreedsListViewControllerSpec.swift in Sources */,
@@ -994,6 +1066,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Breeds/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1013,6 +1086,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Breeds/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1032,7 +1106,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BreedsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1054,7 +1128,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BreedsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

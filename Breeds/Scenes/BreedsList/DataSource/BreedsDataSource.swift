@@ -4,6 +4,7 @@ final class BreedsDataSource: NSObject, UICollectionViewDataSource {
     
     let breedsCollections: UICollectionView
     var breedsList: [BreedsDTO]
+    var didSelectBreed: ((BreedsDTO) -> Void)?
     
     init(breedsCollections: UICollectionView, breedsList: [BreedsDTO]) {
         self.breedsCollections = breedsCollections
@@ -21,9 +22,15 @@ final class BreedsDataSource: NSObject, UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedBreed = breedsList[indexPath.row]
+        didSelectBreed?(selectedBreed)
+    }
 }
 
 extension BreedsDataSource: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.frame.width - 40) / 2
         return CGSize(width: width, height: 170)
