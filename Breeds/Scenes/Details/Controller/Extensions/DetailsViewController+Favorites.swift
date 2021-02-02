@@ -14,7 +14,7 @@ extension DetailsViewController {
             addToFavorite()
         } else {
             detailsView.buttonAddFavorite()
-            print("Remove to favorites")
+            removeToFavorite()
         }
     }
     
@@ -24,6 +24,11 @@ extension DetailsViewController {
         guard let photo = breedsItems?.image.url else { return }
         
         databaseManager.createBreeds(id: id, name: name, photo: photo)
+    }
+    
+    private func removeToFavorite() {
+        guard let id = breedsItems?.id else { return }
+        databaseManager.deleteBreed(id: id)
     }
     
     func setupStatusFavorites() {
