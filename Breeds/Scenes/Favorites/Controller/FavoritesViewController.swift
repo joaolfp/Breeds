@@ -3,8 +3,18 @@ import UIKit
 final class FavoritesViewController: UIViewController {
     
     private(set) var favoritesView = FavoritesView()
-    private(set) var breedList = [BreedEntity]()
+    private(set) var favoriteList = [BreedEntity]()
     private let databaseManager = DatabaseManager()
+    
+    private(set) var dataSource: FavoritesDataSource? {
+        didSet {
+            guard let dataSource = dataSource else { return }
+            
+            favoritesView.favoritesTableView.delegate = dataSource
+            favoritesView.favoritesTableView.dataSource = dataSource
+            favoritesView.favoritesTableView.reloadData()
+        }
+    }
 
     override func loadView() {
         view = favoritesView
@@ -13,25 +23,11 @@ final class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        favoritesView.favoritesTableView.delegate = self
-        favoritesView.favoritesTableView.dataSource = self
-        
-        breedList = databaseManager.fetchAll()
-    }
-}
-
-extension FavoritesViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return breedList.count
+        favoriteList = databaseManager.fetchAll()
+        setupDataSource()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = favoritesView.favoritesTableView.addCell(for: indexPath, cellType: FavoritesViewCell.self)
-        
-        let breed = breedList[indexPath.row]
-        
-        cell.name.text = breed.name
-        
-        return cell
+    func setupDataSource() {
+        dataSource = FavoritesDataSource(favoriteList: favoriteList, favoriteTableView: favoritesView.favoritesTableView)
     }
 }

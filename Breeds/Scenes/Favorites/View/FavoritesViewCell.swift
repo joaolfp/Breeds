@@ -33,4 +33,8 @@ extension FavoritesViewCell: ViewCode {
             name.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
+    
+    func configureViews() {
+        accessoryType = .disclosureIndicator
+    }
 }
