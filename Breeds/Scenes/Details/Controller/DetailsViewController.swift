@@ -2,7 +2,7 @@ import UIKit
 
 final class DetailsViewController: UIViewController {
     
-    var detailsView = DetailsView()
+    let detailsView = DetailsView()
     var breedsItems: BreedsDTO?
     var databaseManager = DatabaseManager()
     

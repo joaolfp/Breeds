@@ -7,7 +7,7 @@ protocol EndpointProtocol {
     var scheme: APIScheme { get }
     var host: String { get }
     var path: String { get }
-    var parameters: APIParameters { get }
+    var parameters: APIParameters? { get }
     var method: APIMethod { get }
     var headers: HTTPHeaders? { get }
 }
@@ -18,7 +18,7 @@ extension EndpointProtocol {
         components.scheme = scheme.toString()
         components.host = host
         components.path = path
-        components.queryItems = parameters.queryItems
+        components.queryItems = parameters?.queryItems
         return components
     }
 

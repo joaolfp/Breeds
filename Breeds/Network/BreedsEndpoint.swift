@@ -20,7 +20,7 @@ extension BreedsEndpoint: EndpointProtocol {
         }
     }
     
-    var parameters: APIParameters {
+    var parameters: APIParameters? {
         return ["api_key": "129d98df-7657-49e0-95ae-5b94116881ae%27"]
     }
     

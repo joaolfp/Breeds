@@ -30,19 +30,19 @@ final class FavoritesViewCell: UITableViewCell, Identifiable {
 
 extension FavoritesViewCell: ViewCode {
     func buildViewHierarchy() {
-        addSubview(photo)
-        addSubview(name)
+        contentView.addSubview(photo)
+        contentView.addSubview(name)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            photo.topAnchor.constraint(equalTo: topAnchor),
-            photo.leadingAnchor.constraint(equalTo: leadingAnchor),
-            photo.bottomAnchor.constraint(equalTo: bottomAnchor),
+            photo.topAnchor.constraint(equalTo: contentView.topAnchor),
+            photo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            photo.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             photo.widthAnchor.constraint(equalToConstant: 100),
             
             name.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: 8),
-            name.centerYAnchor.constraint(equalTo: centerYAnchor)
+            name.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
     
