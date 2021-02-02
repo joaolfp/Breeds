@@ -2,6 +2,12 @@ import UIKit
 
 final class FavoritesViewCell: UITableViewCell, Identifiable {
     
+    lazy var photo: UIImageView = {
+        var imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     lazy var name: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -24,12 +30,18 @@ final class FavoritesViewCell: UITableViewCell, Identifiable {
 
 extension FavoritesViewCell: ViewCode {
     func buildViewHierarchy() {
+        addSubview(photo)
         addSubview(name)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            name.centerXAnchor.constraint(equalTo: centerXAnchor),
+            photo.topAnchor.constraint(equalTo: topAnchor),
+            photo.leadingAnchor.constraint(equalTo: leadingAnchor),
+            photo.bottomAnchor.constraint(equalTo: bottomAnchor),
+            photo.widthAnchor.constraint(equalToConstant: 100),
+            
+            name.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: 8),
             name.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }

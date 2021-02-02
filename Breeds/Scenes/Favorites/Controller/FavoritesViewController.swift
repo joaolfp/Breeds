@@ -23,6 +23,9 @@ final class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         favoriteList = databaseManager.fetchAll()
         setupDataSource()
     }

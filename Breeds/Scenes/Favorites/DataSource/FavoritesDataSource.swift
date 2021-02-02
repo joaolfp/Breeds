@@ -18,8 +18,13 @@ final class FavoritesDataSource: NSObject, UITableViewDataSource, UITableViewDel
         let cell = favoriteTableView.addCell(for: indexPath, cellType: FavoritesViewCell.self)
         
         let breedFavorite = favoriteList[indexPath.row]
+        cell.photo.download(image: breedFavorite.photo ?? "" )
         cell.name.text = breedFavorite.name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
 }
