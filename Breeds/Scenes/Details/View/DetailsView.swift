@@ -1,6 +1,6 @@
 import UIKit
 
-class DetailsView: UIView {
+final class DetailsView: UIView {
     
     var didPressButton: ((UIButton) -> ())?
     

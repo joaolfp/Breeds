@@ -8,13 +8,17 @@ extension DetailsViewController {
         }
     }
     
+    func setupStatusFavorites() {
+        databaseManager.getById(detailsView: detailsView, breedsItems: breedsItems)
+    }
+    
     private func pressedFavorite(sender: UIButton) {
         if detailsView.favorite.backgroundColor == UIColor.white {
             detailsView.buttonRemoveFavorite()
             addToFavorite()
         } else {
             detailsView.buttonAddFavorite()
-            print("Remove to favorites")
+            removeToFavorite()
         }
     }
     
@@ -26,8 +30,8 @@ extension DetailsViewController {
         databaseManager.createBreeds(id: id, name: name, photo: photo)
     }
     
-    func setupStatusFavorites() {
-        databaseManager.getById(detailsView: detailsView, breedsItems: breedsItems)
+    private func removeToFavorite() {
+        guard let id = breedsItems?.id else { return }
+        databaseManager.deleteBreed(id: id)
     }
-    
 }

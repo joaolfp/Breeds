@@ -1,6 +1,6 @@
 import UIKit
 
-class BreedsViewCell: UICollectionViewCell, Identifiable {
+final class BreedsViewCell: UICollectionViewCell, Identifiable {
     
     lazy var photo: UIImageView = {
         var imageView = UIImageView()

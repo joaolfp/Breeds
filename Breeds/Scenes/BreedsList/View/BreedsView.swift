@@ -1,6 +1,6 @@
 import UIKit
 
-class BreedsView: UIView {
+final class BreedsView: UIView {
     
     let pullToRefresh = UIRefreshControl()
 

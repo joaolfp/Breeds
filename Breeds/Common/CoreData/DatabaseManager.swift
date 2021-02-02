@@ -83,4 +83,22 @@ final class DatabaseManager {
         }
     }
     
+    func deleteBreed(id: Int) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: Identifier.Database.entityName)
+        request.predicate = NSPredicate(format: "id == \(id)")
+        
+        do {
+            let breeds = try context.fetch(request)
+            
+            for breed in breeds {
+                context.delete(breed as! NSManagedObject)
+            }
+            try context.save()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
