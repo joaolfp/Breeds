@@ -1,0 +1,57 @@
+import XCTest
+@testable import Breeds
+
+struct Breed: Codable {
+    var bool: Bool
+}
+
+class APIClientSpec: XCTestCase {
+    
+    var sut: APIClient!
+    var mock: URLSessionMock!
+    var request: URLRequest!
+
+    override func setUp() {
+        super.setUp()
+        
+        mock = URLSessionMock()
+        sut = APIClient(session: mock)
+        request = URLRequest(url: URL(string: "http://breeds.com")!)
+        request.httpMethod = APIMethod.get.toString()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    func testRequestWithSuccess() {
+        mock.data = "{\"bool\": true}".data(using: .utf8)
+        
+        sut.request(request, decode: { breed -> Breed in
+            var value = breed
+            value.bool = breed.bool
+            return value
+        }, completion: { result in
+            if case let .success(breed) = result {
+                XCTAssertEqual(breed.bool, false)
+            } else {
+                XCTFail("Should be a success result")
+            }
+        })
+    }
+    
+    func testRequestWithFailure() {
+        mock.data = "{\"value\": 123}".data(using: .utf8)
+        
+        sut.request(request, decode: { json -> Bool in
+            json
+        }, completion: { result in
+            if case let .failure(error) = result {
+                XCTAssertEqual(error.localizedDescription, "JSON Conversion Failure")
+            } else {
+                XCTFail("Should be a failure result")
+            }
+        })
+    }
+
+}
