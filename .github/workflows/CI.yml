@@ -31,5 +31,11 @@ jobs:
     - name: Install Cocoapods
       run: pod install
       
-    - name: Build and Test
+    - name: Bundle update
+      run: bundle update
+      
+    - name: Build and Tests
       run: fastlane tests
+      
+    - name: Post coverage
+      run: bash <(curl -s https://codecov.io/bash)

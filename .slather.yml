@@ -1,0 +1,14 @@
+workspace: Breeds.xcworkspace
+xcodeproj: Breeds.xcodeproj
+scheme: Movs
+coverage_service: html
+source_directory: "Breeds"
+output_directory: coverage_report
+ignore:
+  - ../**/*/Xcode*
+  - ../core/*
+  - Pods/*
+  - BreedsTests/*
+  - BreedsUITests/*
+
+
