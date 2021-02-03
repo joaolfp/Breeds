@@ -33,3 +33,6 @@ jobs:
       
     - name: Build and Test
       run: fastlane tests
+      
+    - name: Coverage report
+      run: slather coverage -x --binary-basename 'CI'

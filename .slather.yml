@@ -1,0 +1,11 @@
+coverage_service: cobertura_xml
+workspace: Breeds.xcworkspace
+xcodeproj: Breeds.xcodeproj
+input_format: profdata
+output_directory: Coverage/
+build_directory: build/Build/
+scheme: CI
+ignore:
+  - BreedsTests/*
+  - BreedsUITests/*
+  - Pods/*
