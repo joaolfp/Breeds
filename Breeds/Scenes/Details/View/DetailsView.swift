@@ -86,12 +86,12 @@ final class DetailsView: UIView {
         return stack
     }()
     
-    func addItems(breedsItems: BreedsDTO?) {
-        photo.download(image: breedsItems?.image.url ?? "")
-        descriptionPet.text = breedsItems?.description ?? L10n.notDescription
-        lifeSpan.text = "\(L10n.lifeSpan) \(breedsItems?.life_span ?? "")"
-        weight.text = "\(L10n.weight) \(breedsItems?.weight.metric ?? "") / \(breedsItems?.weight.imperial ?? "")"
-        height.text = "\(L10n.height) \(breedsItems?.height.metric ?? "") / \(breedsItems?.height.imperial ?? "")"
+    func addItems(breedsItems: BreedsDTO) {
+        photo.download(image: breedsItems.image.url)
+        descriptionPet.text = breedsItems.description ?? L10n.notDescription
+        lifeSpan.text = "\(L10n.lifeSpan) \(breedsItems.life_span)"
+        weight.text = "\(L10n.weight) \(breedsItems.weight.metric) / \(breedsItems.weight.imperial)"
+        height.text = "\(L10n.height) \(breedsItems.height.metric) / \(breedsItems.height.imperial)"
     }
     
     @objc
