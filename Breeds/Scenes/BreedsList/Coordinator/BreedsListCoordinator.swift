@@ -15,7 +15,7 @@ final class BreedsListCoordinator: Coordinator {
     @discardableResult
     func start() -> UIViewController {
         let breedsListViewController = BreedsListViewController()
-        breedsListViewController.tabBarItem = UITabBarItem(title: L10n.breedsName, image: UIImage(systemName: "list.dash"), tag: 0)
+        breedsListViewController.tabBarItem = UITabBarItem(title: L10n.breedsName, image: UIImage(systemName: L10n.iconList), tag: 0)
         breedsListViewController.title = L10n.breedsName
         breedsListViewController.coordinator = self
         show(breedsListViewController, with: .push)

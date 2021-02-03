@@ -20,6 +20,14 @@ jobs:
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
       
+    - name: Cache CocoaPods libraries
+      uses: actions/cache@v2
+      with:
+        path: Pods
+        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-
+      
     - name: Install Cocoapods
       run: pod install
       
