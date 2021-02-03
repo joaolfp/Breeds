@@ -31,15 +31,12 @@ jobs:
     - name: Install Cocoapods
       run: pod install
       
-    - name: Update bundle
+    - name: Bundle update
       run: bundle update
       
-    - name: Build and Test
+    - name: Build and Tests
       run: fastlane tests
       
     - name: Post coverage
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./Coverage/cobertura.xml
-        fail_ci_if_error: true
+      uses: codecov/codecov-action@v2
+      run: bash <(curl -s https://codecov.io/bash)

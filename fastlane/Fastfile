@@ -29,14 +29,14 @@ platform :ios do
             code_coverage: true)
   
       slather(
-      sonarqube_xml: true,
-      build_directory: "./DerivedData",
-      input_format: "profdata",
-      output_directory: "./reports",
-      binary_basename: "CI",
-      scheme: "CI",
+      workspace: "Breeds.xcworkspace",
+      html: true,
+      use_bundle_exec: true,
+      scheme: "Breeds",
+      output_directory: "CoverageReport",
       proj: "Breeds.xcodeproj",
-      workspace: "Breeds.xcworspace"
-    )
+      ignore: [ "R.generated.swift", "Pods/*"],
+      verbose: true,
+      show: true)
   end
 end
