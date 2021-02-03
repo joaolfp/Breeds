@@ -23,15 +23,10 @@ extension DetailsViewController {
     }
     
     private func addToFavorite() {
-        guard let id = breedsItems?.id else { return }
-        guard let name = breedsItems?.name else { return }
-        guard let photo = breedsItems?.image.url else { return }
-        
-        databaseManager.createBreeds(id: id, name: name, photo: photo)
+        databaseManager.createBreeds(id: breedsItems.id, name: breedsItems.name, photo: breedsItems.image.url)
     }
     
     private func removeToFavorite() {
-        guard let id = breedsItems?.id else { return }
-        databaseManager.deleteBreed(id: id)
+        databaseManager.deleteBreed(id: breedsItems.id)
     }
 }

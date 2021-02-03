@@ -25,8 +25,7 @@ final class BreedsListCoordinator: Coordinator {
 
 extension BreedsListCoordinator: BreedsListDelegate {
     func didSelectedBreed(_ selectedBreed: BreedsDTO) {
-        let detailsViewController = DetailsViewController()
-        detailsViewController.breedsItems = selectedBreed
+        let detailsViewController = DetailsViewController(breedsItems: selectedBreed)
         show(detailsViewController, with: .push)
     }
 }
