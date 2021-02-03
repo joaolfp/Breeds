@@ -1,4 +1,5 @@
 breedsName = "Breeds";
+favoritesName = "Favorites";
 notDescription = "This dog has no description";
 lifeSpan = "Life span:";
 weight = "Weight:";
@@ -6,3 +7,5 @@ height = "Height:";
 addFavorites = "♡ ADD TO FAVORITES";
 removeFavorites = "♡ REMOVE TO FAVORITES";
 entityName = "BreedEntity";
+iconList = "list.dash";
+iconFavorite = "heart";

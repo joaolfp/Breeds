@@ -16,7 +16,7 @@ final class BreedsListCoordinator: Coordinator {
     func start() -> UIViewController {
         let breedsListViewController = BreedsListViewController()
         breedsListViewController.tabBarItem = UITabBarItem(title: L10n.breedsName, image: UIImage(systemName: "list.dash"), tag: 0)
-        breedsListViewController.title = "Breeds"
+        breedsListViewController.title = L10n.breedsName
         breedsListViewController.coordinator = self
         show(breedsListViewController, with: .push)
         return navigationController
