@@ -47,6 +47,7 @@
 		A63338CA25BE6CF200572A01 /* BreedsServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338C925BE6CF200572A01 /* BreedsServiceSpec.swift */; };
 		A63338CF25BE705100572A01 /* BreedsListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */; };
 		A63338E025C07B9D00572A01 /* BreedsDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */; };
+		A6598F9525CA797A00780111 /* DatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598F9425CA797A00780111 /* DatabaseManagerProtocol.swift */; };
 		A66E7EC625C8A8220059C1F3 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E7EC525C8A8220059C1F3 /* FavoritesView.swift */; };
 		A66E7ECC25C8AFB20059C1F3 /* FavoritesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E7ECB25C8AFB20059C1F3 /* FavoritesViewCell.swift */; };
 		A66E7ED125C8F2290059C1F3 /* FavoritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E7ED025C8F2290059C1F3 /* FavoritesDataSource.swift */; };
@@ -136,6 +137,7 @@
 		A63338C925BE6CF200572A01 /* BreedsServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsServiceSpec.swift; sourceTree = "<group>"; };
 		A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewControllerSpec.swift; sourceTree = "<group>"; };
 		A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDataSourceSpec.swift; sourceTree = "<group>"; };
+		A6598F9425CA797A00780111 /* DatabaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerProtocol.swift; sourceTree = "<group>"; };
 		A66E7EC525C8A8220059C1F3 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		A66E7ECB25C8AFB20059C1F3 /* FavoritesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewCell.swift; sourceTree = "<group>"; };
 		A66E7ED025C8F2290059C1F3 /* FavoritesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataSource.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				A6AA2D8525C82AB4005FFABE /* DatabaseManager.swift */,
+				A6598F9425CA797A00780111 /* DatabaseManagerProtocol.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -902,6 +905,7 @@
 				A633384025BCBD1D00572A01 /* APIMethod.swift in Sources */,
 				A633383025BCBC6C00572A01 /* APIClient.swift in Sources */,
 				A63337F525BCA69B00572A01 /* UITableView+Identifiable.swift in Sources */,
+				A6598F9525CA797A00780111 /* DatabaseManagerProtocol.swift in Sources */,
 				A633383625BCBCC800572A01 /* APIStatusCode.swift in Sources */,
 				A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */,
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,

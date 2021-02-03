@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import CoreData
 
-final class DatabaseManager {
+final class DatabaseManager: DatabaseManagerProtocol {
     
     func createBreeds(id: Int, name: String, photo: String) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -60,14 +60,13 @@ final class DatabaseManager {
         return breedList
     }
     
-    func getById(detailsView: DetailsView, breedsItems: BreedsDTO?) {
+    func getById(detailsView: DetailsView, breedsItems: BreedsDTO) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: L10n.entityName)
         
-        guard let id = breedsItems?.id else { return }
-        request.predicate = NSPredicate(format: "id == %@", "\(id)")
+        request.predicate = NSPredicate(format: "id == %@", "\(breedsItems.id)")
         
         do {
             let breed = try context.fetch(request)
