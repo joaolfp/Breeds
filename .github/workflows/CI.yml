@@ -34,30 +34,9 @@ jobs:
     - name: Update bundle
       run: bundle update
       
-    - name: Build
-      run: |
-        set -o pipefail
-        slather setup
-        xcodebuild build-for-testing \
-        -scheme CI \
-        -destination 'platform=iOS Simulator,name=iPhone 8' \
-        -derivedDataPath build \
-        | xcpretty
-
+    - name: Build and Test
+      run: fastlane tests
       
-    - name: Test
-      run: |
-        set -o pipefail
-        xcodebuild test-without-building \
-        -scheme CI \
-        -destination 'platform=iOS Simulator,name=iPhone 8' \
-        -derivedDataPath build \
-        -enableCodeCoverage YES \
-        | xcpretty
-        
-    - name: Coverage report
-      run: slather coverage -x --binary-basename 'CI'
-
     - name: Post coverage
       uses: codecov/codecov-action@v1
       with:

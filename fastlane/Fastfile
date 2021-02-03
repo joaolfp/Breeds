@@ -25,6 +25,18 @@ platform :ios do
   lane :tests do
   run_tests(workspace: "Breeds.xcworkspace",
             devices: "iPhone 8",
-            scheme: "CI")
+            scheme: "CI",
+            code_coverage: true)
+  
+      slather(
+      sonarqube_xml: true,
+      build_directory: "./DerivedData",
+      input_format: "profdata",
+      output_directory: "./reports",
+      binary_basename: "CI",
+      scheme: "CI",
+      proj: "Breeds.xcodeproj",
+      workspace: "Breeds.xcworspace"
+    )
   end
 end
