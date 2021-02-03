@@ -65,7 +65,7 @@ final class DetailsView: UIView {
     
     lazy var favorite: UIButton = {
         var button = UIButton(type: .system)
-        button.setTitle(Identifier.String.addFavorites, for: .normal)
+        button.setTitle(L10n.addFavorites, for: .normal)
         button.setTitleColor(.red, for: .normal)
         button.backgroundColor = .white
         button.addTarget(self, action: #selector(DetailsView.pressedFavorite), for: .touchUpInside)
@@ -86,12 +86,12 @@ final class DetailsView: UIView {
         return stack
     }()
     
-    func addItems(breedsItems: BreedsDTO?) {
-        photo.download(image: breedsItems?.image.url ?? "")
-        descriptionPet.text = breedsItems?.description ?? Identifier.String.notDescription
-        lifeSpan.text = "\(Identifier.String.lifeSpan) \(breedsItems?.life_span ?? "")"
-        weight.text = "\(Identifier.String.weight) \(breedsItems?.weight.metric ?? "") / \(breedsItems?.weight.imperial ?? "")"
-        height.text = "\(Identifier.String.height) \(breedsItems?.height.metric ?? "") / \(breedsItems?.height.imperial ?? "")"
+    func addItems(breedsItems: BreedsDTO) {
+        photo.download(image: breedsItems.image.url)
+        descriptionPet.text = breedsItems.description ?? L10n.notDescription
+        lifeSpan.text = "\(L10n.lifeSpan) \(breedsItems.life_span)"
+        weight.text = "\(L10n.weight) \(breedsItems.weight.metric) / \(breedsItems.weight.imperial)"
+        height.text = "\(L10n.height) \(breedsItems.height.metric) / \(breedsItems.height.imperial)"
     }
     
     @objc
@@ -153,13 +153,13 @@ extension DetailsView: ViewCode {
 // MARK: - Status favorites button
 extension DetailsView {
     func buttonRemoveFavorite() {
-        favorite.setTitle(Identifier.String.removeFavorites, for: .normal)
+        favorite.setTitle(L10n.removeFavorites, for: .normal)
         favorite.setTitleColor(.white, for: .normal)
         favorite.backgroundColor = .red
     }
     
     func buttonAddFavorite() {
-        favorite.setTitle(Identifier.String.addFavorites, for: .normal)
+        favorite.setTitle(L10n.addFavorites, for: .normal)
         favorite.setTitleColor(.red, for: .normal)
         favorite.backgroundColor = .white
     }

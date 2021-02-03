@@ -2,13 +2,13 @@ import Foundation
 import UIKit
 import CoreData
 
-final class DatabaseManager {
+final class DatabaseManager: DatabaseManagerProtocol {
     
     func createBreeds(id: Int, name: String, photo: String) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let breed = NSEntityDescription.insertNewObject(forEntityName: Identifier.Database.entityName, into: context) as! BreedEntity
+        let breed = NSEntityDescription.insertNewObject(forEntityName: L10n.entityName, into: context) as! BreedEntity
         
         breed.id = Int32(id)
         breed.name = name
@@ -26,7 +26,7 @@ final class DatabaseManager {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<BreedEntity>(entityName: Identifier.Database.entityName)
+        let fetchRequest = NSFetchRequest<BreedEntity>(entityName: L10n.entityName)
         
         do {
             
@@ -49,7 +49,7 @@ final class DatabaseManager {
         
         var breedList: [BreedEntity] = []
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Identifier.Database.entityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: L10n.entityName)
         
         do {
             breedList = try context.fetch(fetchRequest) as! [BreedEntity]
@@ -60,14 +60,13 @@ final class DatabaseManager {
         return breedList
     }
     
-    func getById(detailsView: DetailsView, breedsItems: BreedsDTO?) {
+    func getById(detailsView: DetailsView, breedsItems: BreedsDTO) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: Identifier.Database.entityName)
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: L10n.entityName)
         
-        guard let id = breedsItems?.id else { return }
-        request.predicate = NSPredicate(format: "id == %@", "\(id)")
+        request.predicate = NSPredicate(format: "id == %@", "\(breedsItems.id)")
         
         do {
             let breed = try context.fetch(request)
@@ -87,7 +86,7 @@ final class DatabaseManager {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: Identifier.Database.entityName)
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: L10n.entityName)
         request.predicate = NSPredicate(format: "id == \(id)")
         
         do {

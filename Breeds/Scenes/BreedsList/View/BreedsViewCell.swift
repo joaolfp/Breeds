@@ -21,15 +21,15 @@ final class BreedsViewCell: UICollectionViewCell, Identifiable {
 
 extension BreedsViewCell: ViewCode {
     func buildViewHierarchy() {
-        addSubview(photo)
+        contentView.addSubview(photo)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            photo.topAnchor.constraint(equalTo: topAnchor),
-            photo.leadingAnchor.constraint(equalTo: leadingAnchor),
-            photo.trailingAnchor.constraint(equalTo: trailingAnchor),
-            photo.bottomAnchor.constraint(equalTo: bottomAnchor)
+            photo.topAnchor.constraint(equalTo: contentView.topAnchor),
+            photo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            photo.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            photo.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }

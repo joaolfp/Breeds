@@ -29,14 +29,14 @@ class BreedsDataSourceSpec: XCTestCase {
     }
     
     func testShouldHaveAConfiguredCell() {
-        sut.breedsList = [
-            BreedsDTO(id: 22, name: "Cachorro",
-                      temperament: "Tranquilo",
-                      description: "Cachorro Descrição",
-                      life_span: "10-50",
-                      image: BreedsImage(url: "www.google.com"),
-                      weight: BreedsWeight(metric: "2", imperial: "2"),
-                      height: BreedsHeight(metric: "2", imperial: "2"))]
+        sut.breedsList = [.stub(id: 2,
+                                name: "Cachorro",
+                                temperament: "Tranquilo",
+                                description: "Descrição",
+                                life_span: "10-50",
+                                image: .stub(url: "www.google.com"),
+                                weight: .stub(metric: "2", imperial: "2"),
+                                height: .stub(metric: "2", imperial: "2"))]
         
         let index = IndexPath(row: 0, section: 0)
         
