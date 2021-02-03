@@ -33,7 +33,7 @@ class APIClientSpec: XCTestCase {
             return value
         }, completion: { result in
             if case let .success(breed) = result {
-                XCTAssertEqual(breed.bool, false)
+                XCTAssertEqual(breed.bool, true)
             } else {
                 XCTFail("Should be a success result")
             }
@@ -47,7 +47,7 @@ class APIClientSpec: XCTestCase {
             json
         }, completion: { result in
             if case let .failure(error) = result {
-                XCTAssertEqual(error.localizedDescription, "JSON Conversion Failure")
+                XCTAssertEqual(error.localizedDescription, "JSON conversion failure")
             } else {
                 XCTFail("Should be a failure result")
             }
