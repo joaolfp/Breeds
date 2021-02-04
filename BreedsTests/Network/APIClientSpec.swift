@@ -22,9 +22,13 @@ class APIClientSpec: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
+        
+        sut = nil
+        mock = nil
+        request = nil
     }
     
-    func testRequestWithSuccess() {
+    func testVerifyRequestWithSuccess() {
         mock.data = "{\"bool\": true}".data(using: .utf8)
         
         sut.request(request, decode: { breed -> Breed in
@@ -40,7 +44,7 @@ class APIClientSpec: XCTestCase {
         })
     }
     
-    func testRequestWithFailure() {
+    func testVerifyRequestWithFailure() {
         mock.data = "{\"value\": 123}".data(using: .utf8)
         
         sut.request(request, decode: { json -> Bool in
@@ -52,6 +56,11 @@ class APIClientSpec: XCTestCase {
                 XCTFail("Should be a failure result")
             }
         })
+    }
+    
+    func testVerifyCancellAllRequests() {
+        sut.cancelRequests()
+        XCTAssertEqual(mock.tasksCancelled, true)
     }
 
 }

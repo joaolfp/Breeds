@@ -30,6 +30,7 @@ final class DetailsView: UIView {
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 0
         label.textAlignment = .justified
+        label.accessibilityIdentifier = "description-text"
         return label
     }()
     
@@ -74,6 +75,7 @@ final class DetailsView: UIView {
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.clipsToBounds = true
         button.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        button.accessibilityIdentifier = "button-favorite"
         return button
     }()
 
