@@ -5,6 +5,9 @@ class FavoritesDataSourceSpec: XCTestCase {
     
     var favoritesView: FavoritesView!
     var favoritesList: [BreedEntity]!
+    var searchBar: UISearchBar!
+    var filteredFavorite: [BreedEntity]!
+    var inSearchMode: Bool!
     var sut: FavoritesDataSource!
     
     override func setUp() {
@@ -12,7 +15,11 @@ class FavoritesDataSourceSpec: XCTestCase {
         
         favoritesView = FavoritesView()
         favoritesList = []
-        sut = FavoritesDataSource(favoriteList: favoritesList, favoriteTableView: favoritesView.favoritesTableView)
+        searchBar = UISearchBar()
+        filteredFavorite = []
+        inSearchMode = true
+        sut = FavoritesDataSource(favoriteList: favoritesList, favoriteTableView: favoritesView.favoritesTableView, searchBar: searchBar,
+                                  filteredFavorite: filteredFavorite, inSearchMode: inSearchMode)
     }
 
     override func tearDown() {
@@ -20,6 +27,9 @@ class FavoritesDataSourceSpec: XCTestCase {
         
         favoritesView = nil
         favoritesList = nil
+        searchBar = nil
+        filteredFavorite = nil
+        inSearchMode = nil
         sut = nil
     }
 
