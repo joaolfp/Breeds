@@ -4,21 +4,28 @@ final class FavoritesDataSource: NSObject, UITableViewDataSource, UITableViewDel
     
     var favoriteList: [BreedEntity]
     var favoriteTableView: UITableView
+    var searchBar: UISearchBar
+    var filteredFavorite: [BreedEntity]
+    var inSearchMode: Bool = false
     private var databaseManager = DatabaseManager()
     
-    init(favoriteList: [BreedEntity], favoriteTableView: UITableView) {
+    init(favoriteList: [BreedEntity], favoriteTableView: UITableView, searchBar: UISearchBar, filteredFavorite: [BreedEntity],
+         inSearchMode: Bool) {
         self.favoriteList = favoriteList
         self.favoriteTableView = favoriteTableView
+        self.searchBar = searchBar
+        self.filteredFavorite = filteredFavorite
+        self.inSearchMode = inSearchMode
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteList.count
+        return inSearchMode ? filteredFavorite.count : favoriteList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoriteTableView.addCell(for: indexPath, cellType: FavoritesViewCell.self)
         
-        let breedFavorite = favoriteList[indexPath.row]
+        let breedFavorite = inSearchMode ? filteredFavorite[indexPath.row] : favoriteList[indexPath.row]
         cell.photo.download(image: breedFavorite.photo ?? "" )
         cell.name.text = breedFavorite.name
         
@@ -28,8 +35,14 @@ final class FavoritesDataSource: NSObject, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             let index = indexPath.row
-            let breed = favoriteList[index]
-            favoriteList.remove(at: index)
+            let breed = inSearchMode ? filteredFavorite[index] : favoriteList[index]
+            
+            if inSearchMode == false {
+                favoriteList.remove(at: index)
+            } else {
+                filteredFavorite.remove(at: index)
+            }
+            
             databaseManager.deleteBreed(id: Int(breed.id))
             favoriteTableView.deleteRows(at: [indexPath], with: .automatic)
         }
