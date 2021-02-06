@@ -12,14 +12,8 @@ extension FavoritesViewController: UISearchBarDelegate {
     }
                 
     func configureSearchBar() {
+        favoritesView.searchBarLayout(searchBar: searchBar)
         searchBar.delegate = self
-        searchBar.sizeToFit()
-        searchBar.showsCancelButton = true
-        searchBar.becomeFirstResponder()
-        searchBar.tintColor = .black
-        searchBar.barTintColor = .black
-        searchBar.placeholder = "Search for cards"
-        searchBar.searchTextField.textColor = .black
                         
         navigationItem.rightBarButtonItem = nil
         navigationItem.titleView = searchBar
@@ -29,14 +23,13 @@ extension FavoritesViewController: UISearchBarDelegate {
         navigationItem.titleView = nil
         setupSearchBar()
         inSearchMode = false
-        favoritesView.favoritesTableView.reloadData()
+        favoriteList = databaseManager.fetchAll()
         setupDataSource()
     }
                 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" || searchBar.text == nil {
             inSearchMode = false
-            favoritesView.favoritesTableView.reloadData()
             setupDataSource()
             view.endEditing(true)
         } else {
