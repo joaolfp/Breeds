@@ -40,6 +40,7 @@ final class FavoritesDataSource: NSObject, UITableViewDataSource, UITableViewDel
             if inSearchMode == false {
                 favoriteList.remove(at: index)
             } else {
+                favoriteList.remove(at: index)
                 filteredFavorite.remove(at: index)
             }
             

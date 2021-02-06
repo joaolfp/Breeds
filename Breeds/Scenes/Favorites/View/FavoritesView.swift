@@ -9,6 +9,16 @@ final class FavoritesView: UIView {
         return tableView
     }()
     
+    func searchBarLayout(searchBar: UISearchBar) {
+        searchBar.sizeToFit()
+        searchBar.showsCancelButton = true
+        searchBar.becomeFirstResponder()
+        searchBar.tintColor = .black
+        searchBar.barTintColor = .black
+        searchBar.placeholder = "Search for cards"
+        searchBar.searchTextField.textColor = .black
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupBaseView()

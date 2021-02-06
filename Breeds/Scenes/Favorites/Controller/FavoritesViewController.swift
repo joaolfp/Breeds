@@ -3,8 +3,8 @@ import UIKit
 final class FavoritesViewController: UIViewController {
     
     private(set) var favoritesView = FavoritesView()
-    private(set) var favoriteList = [BreedEntity]()
-    private let databaseManager = DatabaseManager()
+    var favoriteList = [BreedEntity]()
+    let databaseManager = DatabaseManager()
     var searchBar: UISearchBar = UISearchBar()
     var filteredFavorite = [BreedEntity]()
     var inSearchMode = false
