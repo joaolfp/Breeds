@@ -52,6 +52,7 @@ final class BreedsListViewController: UIViewController {
                 self?.breedsList = breeds
                 self?.setupDataSource()
             case .failure(let error):
+                self?.view = ErrorView.instance
                 print(error.localizedDescription)
             }
         }

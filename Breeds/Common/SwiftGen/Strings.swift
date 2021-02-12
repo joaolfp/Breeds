@@ -26,6 +26,8 @@ internal enum L10n {
   internal static let iconList = L10n.tr("Localizable", "iconList")
   /// Life span:
   internal static let lifeSpan = L10n.tr("Localizable", "lifeSpan")
+  /// Connection error
+  internal static let messageError = L10n.tr("Localizable", "messageError")
   /// This dog has no description
   internal static let notDescription = L10n.tr("Localizable", "notDescription")
   /// ♡ REMOVE TO FAVORITES

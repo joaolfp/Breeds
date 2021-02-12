@@ -9,3 +9,4 @@ removeFavorites = "♡ REMOVE TO FAVORITES";
 entityName = "BreedEntity";
 iconList = "list.dash";
 iconFavorite = "heart";
+messageError = "Connection error";
