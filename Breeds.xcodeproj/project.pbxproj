@@ -239,7 +239,7 @@
 				A63337BA25BCA2E200572A01 /* Common */,
 				A63337BC25BCA30600572A01 /* Network */,
 				A63337B925BCA2D500572A01 /* Resources */,
-				A63337BB25BCA2EE00572A01 /* Scenes */,
+				A63337BB25BCA2EE00572A01 /* Features */,
 			);
 			path = Breeds;
 			sourceTree = "<group>";
@@ -306,14 +306,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		A63337BB25BCA2EE00572A01 /* Scenes */ = {
+		A63337BB25BCA2EE00572A01 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				A69DD72425C26FDA00AC86FE /* Details */,
 				A633381125BCB3B700572A01 /* Favorites */,
 				A63337C025BCA34400572A01 /* BreedsList */,
 			);
-			path = Scenes;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		A63337BC25BCA30600572A01 /* Network */ = {
