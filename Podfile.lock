@@ -1,5 +1,5 @@
 PODS:
-  - Kingfisher (6.1.0)
+  - Kingfisher (6.1.1)
   - SwiftGen (6.4.0)
   - SwiftLint (0.42.0)
 
@@ -15,7 +15,7 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
+  Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
   SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
