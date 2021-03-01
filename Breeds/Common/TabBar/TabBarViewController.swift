@@ -1,24 +1,20 @@
 import UIKit
 
 final class TabBarViewController: UITabBarController {
-            
-    required init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let breedsCoordinator = BreedsListCoordinator(navigationController: navigationController())
+        breedsCoordinator.start()
+        
+        let favoritesCoordinator = FavoritesCoordinator(navigationController: navigationController())
+        favoritesCoordinator.start()
 
-        viewControllers = [
-            BreedsListCoordinator(navigationController: navigationController()).start(),
-            FavoritesCoordinator(navigationController: navigationController()).start()
-        ]
+        viewControllers = [breedsCoordinator.navigationController, favoritesCoordinator.navigationController]
+        
         tabBar.barTintColor = .yellow
         tabBar.tintColor = .black
-    }
-            
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     private func navigationController() -> UINavigationController {
