@@ -4,14 +4,14 @@ final class BreedsView: UIView {
     
     let pullToRefresh = UIRefreshControl()
 
-    lazy var activityIndicator: UIActivityIndicatorView = {
+    let activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: .large)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.color = .gray
         return view
     }()
     
-    lazy var breedsCollections: UICollectionView = {
+    let breedsCollections: UICollectionView = {
         var flowLayout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
             

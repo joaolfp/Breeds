@@ -2,13 +2,13 @@ import UIKit
 
 final class FavoritesViewCell: UITableViewCell, Identifiable {
     
-    lazy var photo: UIImageView = {
+    let photo: UIImageView = {
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    lazy var name: UILabel = {
+    let name: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black

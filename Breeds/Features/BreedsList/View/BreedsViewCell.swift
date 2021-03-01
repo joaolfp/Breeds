@@ -2,7 +2,7 @@ import UIKit
 
 final class BreedsViewCell: UICollectionViewCell, Identifiable {
     
-    lazy var photo: UIImageView = {
+    let photo: UIImageView = {
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView

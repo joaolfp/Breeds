@@ -4,26 +4,26 @@ final class DetailsView: UIView {
     
     var didPressButton: ((UIButton) -> ())?
     
-    private lazy var scrollView: UIScrollView = {
+    private let scrollView: UIScrollView = {
         var scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
             
-    private lazy var contentView: UIView = {
+    private let contentView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    lazy var photo: UIImageView = {
+    let photo: UIImageView = {
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         return imageView
     }()
     
-    lazy var descriptionPet: UILabel = {
+    let descriptionPet: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
@@ -34,7 +34,7 @@ final class DetailsView: UIView {
         return label
     }()
     
-    lazy var lifeSpan: UILabel = {
+    let lifeSpan: UILabel = {
         var label = PaddingLabel(top: 8, bottom: 8, left: 8, right: 8)
         label.textColor = .white
         label.backgroundColor = .blue
@@ -44,7 +44,7 @@ final class DetailsView: UIView {
         return label
     }()
     
-    lazy var weight: UILabel = {
+    let weight: UILabel = {
         var label = PaddingLabel(top: 8, bottom: 8, left: 8, right: 8)
         label.textColor = .white
         label.backgroundColor = .red
@@ -54,7 +54,7 @@ final class DetailsView: UIView {
         return label
     }()
     
-    lazy var height: UILabel = {
+    let height: UILabel = {
         var label = PaddingLabel(top: 8, bottom: 8, left: 8, right: 8)
         label.textColor = .white
         label.backgroundColor = .systemGreen
@@ -64,7 +64,7 @@ final class DetailsView: UIView {
         return label
     }()
     
-    lazy var favorite: UIButton = {
+    let favorite: UIButton = {
         var button = UIButton(type: .system)
         button.setTitle(L10n.addFavorites, for: .normal)
         button.setTitleColor(.red, for: .normal)
@@ -79,7 +79,7 @@ final class DetailsView: UIView {
         return button
     }()
 
-    private lazy var stackContentView: UIStackView = {
+    private let stackContentView: UIStackView = {
         var stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical

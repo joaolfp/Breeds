@@ -2,7 +2,7 @@ import UIKit
 
 final class FavoritesView: UIView {
     
-    lazy var favoritesTableView: UITableView = {
+    let favoritesTableView: UITableView = {
         var tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.registerCell(cellType: FavoritesViewCell.self)
