@@ -66,6 +66,7 @@
 		A69DD72625C2700600AC86FE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DD72525C2700600AC86FE /* DetailsViewController.swift */; };
 		A6A25D2125C457B8001A0630 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A25D2025C457B8001A0630 /* DetailsView.swift */; };
 		A6A8899225F07FA6009BCE0D /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8899125F07FA6009BCE0D /* DetailsCoordinator.swift */; };
+		A6A889A425F089B2009BCE0D /* DatabaseManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A889A325F089B2009BCE0D /* DatabaseManagerSpec.swift */; };
 		A6AA2D6125C63E84005FFABE /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D6025C63E84005FFABE /* PaddingLabel.swift */; };
 		A6AA2D7525C644E6005FFABE /* PaddingLabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D7425C644E6005FFABE /* PaddingLabelSpec.swift */; };
 		A6AA2D7E25C75804005FFABE /* DetailsViewController+Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AA2D7D25C75804005FFABE /* DetailsViewController+Favorites.swift */; };
@@ -162,6 +163,7 @@
 		A69DD72525C2700600AC86FE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A6A25D2025C457B8001A0630 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A6A8899125F07FA6009BCE0D /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
+		A6A889A325F089B2009BCE0D /* DatabaseManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerSpec.swift; sourceTree = "<group>"; };
 		A6AA2D6025C63E84005FFABE /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		A6AA2D7425C644E6005FFABE /* PaddingLabelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabelSpec.swift; sourceTree = "<group>"; };
 		A6AA2D7D25C75804005FFABE /* DetailsViewController+Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsViewController+Favorites.swift"; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		A633379225BCA0A000572A01 /* BreedsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6A8899F25F088EA009BCE0D /* DatabaseManager */,
 				A6598FFE25CB302600780111 /* Network */,
 				A66E7ED525C9D24D0059C1F3 /* Stub */,
 				A6AA2D6825C644BD005FFABE /* Library */,
@@ -648,6 +651,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		A6A8899F25F088EA009BCE0D /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				A6A889A325F089B2009BCE0D /* DatabaseManagerSpec.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
 		A6AA2D5F25C63E70005FFABE /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -1000,6 +1011,7 @@
 				A66E7EE425C9D3BC0059C1F3 /* BreedsWeightStub.swift in Sources */,
 				A66E7EDF25C9D3400059C1F3 /* BreedsImageStub.swift in Sources */,
 				A6AA2D7525C644E6005FFABE /* PaddingLabelSpec.swift in Sources */,
+				A6A889A425F089B2009BCE0D /* DatabaseManagerSpec.swift in Sources */,
 				A6598F9A25CA7B9000780111 /* FavoritesDataSourceSpec.swift in Sources */,
 				A63338E025C07B9D00572A01 /* BreedsDataSourceSpec.swift in Sources */,
 				A66E7EE925C9D42A0059C1F3 /* BreedsHeightStub.swift in Sources */,
