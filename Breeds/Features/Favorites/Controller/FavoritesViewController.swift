@@ -3,11 +3,11 @@ import UIKit
 final class FavoritesViewController: UIViewController {
     
     private(set) var favoritesView = FavoritesView()
-    var favoriteList = [BreedEntity]()
-    let databaseManager = DatabaseManager()
-    var searchBar: UISearchBar = UISearchBar()
-    var filteredFavorite = [BreedEntity]()
-    var inSearchMode = false
+    internal var favoriteList = [BreedEntity]()
+    internal var databaseManager = DatabaseManager()
+    internal var searchBar: UISearchBar = UISearchBar()
+    internal var filteredFavorite = [BreedEntity]()
+    internal var inSearchMode = false
     
     private(set) var dataSource: FavoritesDataSource? {
         didSet {
