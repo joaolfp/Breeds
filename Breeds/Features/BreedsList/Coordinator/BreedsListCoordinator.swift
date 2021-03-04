@@ -6,7 +6,7 @@ protocol BreedsListDelegate: class {
 
 class BreedsListCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
-    unowned var navigationController: UINavigationController
+    var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -23,7 +23,7 @@ class BreedsListCoordinator: Coordinator {
 
 extension BreedsListCoordinator: BreedsListDelegate {
     func didSelectedBreed(_ selectedBreed: BreedsDTO) {
-        let detailsViewController = DetailsViewController(breedsItems: selectedBreed)
-        show(detailsViewController, with: .push)
+        let detailsCoordinator = DetailsCoordinator(navigationController: navigationController, breedsDTO: selectedBreed)
+        detailsCoordinator.start()
     }
 }

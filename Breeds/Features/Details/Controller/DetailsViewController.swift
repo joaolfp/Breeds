@@ -2,9 +2,9 @@ import UIKit
 
 final class DetailsViewController: UIViewController {
     
-    let detailsView = DetailsView()
-    var breedsItems: BreedsDTO
-    var databaseManager = DatabaseManager()
+    private(set) var detailsView = DetailsView()
+    internal var breedsItems: BreedsDTO
+    internal var databaseManager = DatabaseManager()
     
     init(breedsItems: BreedsDTO) {
         self.breedsItems = breedsItems
