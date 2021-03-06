@@ -34,7 +34,7 @@
 		A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633384B25BCBDB500572A01 /* APIEndpointProtocol.swift */; };
 		A633385125BCBE0700572A01 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633385025BCBE0700572A01 /* URL+Utils.swift */; };
 		A633385F25BCC4D300572A01 /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633385E25BCC4D300572A01 /* BreedsView.swift */; };
-		A633386425BCF12000572A01 /* Image+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386325BCF12000572A01 /* Image+Kingfisher.swift */; };
+		A633386425BCF12000572A01 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386325BCF12000572A01 /* UIImageView+Download.swift */; };
 		A633386A25BCF24700572A01 /* BreedsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386925BCF24700572A01 /* BreedsDataSource.swift */; };
 		A633387225BCF29100572A01 /* BreedsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633387125BCF29100572A01 /* BreedsViewCell.swift */; };
 		A633387C25BCFAAB00572A01 /* BreedsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633387B25BCFAAB00572A01 /* BreedsEndpoint.swift */; };
@@ -131,7 +131,7 @@
 		A633384B25BCBDB500572A01 /* APIEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpointProtocol.swift; sourceTree = "<group>"; };
 		A633385025BCBE0700572A01 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
 		A633385E25BCC4D300572A01 /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
-		A633386325BCF12000572A01 /* Image+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Kingfisher.swift"; sourceTree = "<group>"; };
+		A633386325BCF12000572A01 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
 		A633386925BCF24700572A01 /* BreedsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDataSource.swift; sourceTree = "<group>"; };
 		A633387125BCF29100572A01 /* BreedsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewCell.swift; sourceTree = "<group>"; };
 		A633387B25BCFAAB00572A01 /* BreedsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsEndpoint.swift; sourceTree = "<group>"; };
@@ -418,7 +418,7 @@
 				A63337E725BCA5FC00572A01 /* Identifiable.swift */,
 				A63337EF25BCA63E00572A01 /* UICollectionView+Identifiable.swift */,
 				A63337F425BCA69B00572A01 /* UITableView+Identifiable.swift */,
-				A633386325BCF12000572A01 /* Image+Kingfisher.swift */,
+				A633386325BCF12000572A01 /* UIImageView+Download.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -708,7 +708,6 @@
 				A633377325BCA09C00572A01 /* Frameworks */,
 				A633377425BCA09C00572A01 /* Resources */,
 				A633380825BCA81200572A01 /* SwiftLint */,
-				F299D231E9DA593C2A4AA3B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -746,7 +745,6 @@
 				A633379625BCA0A000572A01 /* Sources */,
 				A633379725BCA0A000572A01 /* Frameworks */,
 				A633379825BCA0A000572A01 /* Resources */,
-				CFD9DDF9B1B874ED28A0882C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -913,40 +911,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		CFD9DDF9B1B874ED28A0882C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breeds-BreedsUITests/Pods-Breeds-BreedsUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F299D231E9DA593C2A4AA3B3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Breeds/Pods-Breeds-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Breeds/Pods-Breeds-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breeds/Pods-Breeds-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -984,7 +948,7 @@
 				A633380D25BCB24200572A01 /* BreedsListCoordinator.swift in Sources */,
 				A633385F25BCC4D300572A01 /* BreedsView.swift in Sources */,
 				A6A8899225F07FA6009BCE0D /* DetailsCoordinator.swift in Sources */,
-				A633386425BCF12000572A01 /* Image+Kingfisher.swift in Sources */,
+				A633386425BCF12000572A01 /* UIImageView+Download.swift in Sources */,
 				A671CE5F25D6ED1700C07E63 /* ErrorView.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
 				A639299E25CD7B3F000C7E1B /* FavoritesViewController+SearchView.swift in Sources */,
