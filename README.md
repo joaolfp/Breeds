@@ -27,5 +27,5 @@ It is a simple application that lists dog breeds, the user can see the detail of
 
 ## Contribution
 
-* To contribute, from a fork in the project
+* To contribute, from a fork in the project <br>
 Please feel free to give suggestions, improvements and feel free to add features. After you contribute, open a pull request.
