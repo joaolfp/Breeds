@@ -13,6 +13,7 @@ It is a simple application that lists dog breeds, the user can see the detail of
 * <b>Dependencies:</b> CocoaPods
 * <b>Architecture:</b> MVC
 * <b>Network:</b> URLSession
+* <b>Data Persistence:</b> Core Data
 * <b>Layout:</b> View Code (without Storyboard)
 * <b>UnitTest and UITest:</b> XCTest
 * <b>CI:</b> Workflow Github Action
