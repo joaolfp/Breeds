@@ -8,8 +8,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        window?.rootViewController = TabBarViewController()
+        let navigationController = UINavigationController()
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+        let coordinator = LoginCoordinator(navigationController: navigationController)
+        coordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
