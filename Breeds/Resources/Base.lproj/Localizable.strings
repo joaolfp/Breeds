@@ -10,3 +10,4 @@ entityName = "BreedEntity";
 iconList = "list.dash";
 iconFavorite = "heart";
 messageError = "Connection error";
+email = "Email";

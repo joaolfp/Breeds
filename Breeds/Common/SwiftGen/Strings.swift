@@ -14,6 +14,8 @@ internal enum L10n {
   internal static let addFavorites = L10n.tr("Localizable", "addFavorites")
   /// Breeds
   internal static let breedsName = L10n.tr("Localizable", "breedsName")
+  /// Email
+  internal static let email = L10n.tr("Localizable", "email")
   /// BreedEntity
   internal static let entityName = L10n.tr("Localizable", "entityName")
   /// Favorites
