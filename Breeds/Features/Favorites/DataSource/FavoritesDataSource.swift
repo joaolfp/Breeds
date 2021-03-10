@@ -26,8 +26,7 @@ final class FavoritesDataSource: NSObject, UITableViewDataSource, UITableViewDel
         let cell = favoriteTableView.addCell(for: indexPath, cellType: FavoritesViewCell.self)
         
         let breedFavorite = inSearchMode ? filteredFavorite[indexPath.row] : favoriteList[indexPath.row]
-        cell.photo.download(image: breedFavorite.photo ?? "" )
-        cell.name.text = breedFavorite.name
+        cell.favoritesCell(with: breedFavorite)
         
         return cell
     }

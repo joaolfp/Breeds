@@ -17,6 +17,10 @@ final class BreedsViewCell: UICollectionViewCell, Identifiable {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func breedsCell(with breeds: BreedsDTO) {
+        photo.download(image: breeds.image.url)
+    }
 }
 
 extension BreedsViewCell: ViewCode {

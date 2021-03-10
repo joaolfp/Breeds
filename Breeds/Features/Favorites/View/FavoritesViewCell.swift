@@ -26,6 +26,11 @@ final class FavoritesViewCell: UITableViewCell, Identifiable {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func favoritesCell(with favorites: BreedEntity) {
+        photo.download(image: favorites.photo ?? "" )
+        name.text = favorites.name
+    }
 }
 
 extension FavoritesViewCell: ViewCode {

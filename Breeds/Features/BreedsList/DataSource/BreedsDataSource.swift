@@ -17,9 +17,7 @@ final class BreedsDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = breedsCollections.addCell(for: indexPath, cellType: BreedsViewCell.self)
-        
-        cell.photo.download(image: breedsList[indexPath.row].image.url)
-        
+        cell.breedsCell(with: breedsList[indexPath.row])
         return cell
     }
     
