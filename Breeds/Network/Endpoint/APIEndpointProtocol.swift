@@ -25,6 +25,17 @@ extension EndpointProtocol {
     var request: URLRequest {
         var request = URLRequest(with: urlComponents.url)
         request.httpMethod = method.toString()
+        
+        if let parameters = parameters {
+            do {
+                if method != .get {
+                    request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                }
+            } catch {
+                print("Error json")
+            }
+        }
+        
         request.allHTTPHeaderFields = headers
         return request
     }
