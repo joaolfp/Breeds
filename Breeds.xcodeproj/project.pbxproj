@@ -47,9 +47,9 @@
 		A63338CF25BE705100572A01 /* BreedsListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */; };
 		A63338E025C07B9D00572A01 /* BreedsDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */; };
 		A639299E25CD7B3F000C7E1B /* FavoritesViewController+SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A639299D25CD7B3F000C7E1B /* FavoritesViewController+SearchView.swift */; };
-		A642923B25F9351C0041FEE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642923A25F9351C0041FEE2 /* LoginViewController.swift */; };
-		A642924025F935840041FEE2 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642923F25F935840041FEE2 /* LoginCoordinator.swift */; };
-		A642924525F936840041FEE2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642924425F936840041FEE2 /* LoginView.swift */; };
+		A642923B25F9351C0041FEE2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642923A25F9351C0041FEE2 /* SignupViewController.swift */; };
+		A642924025F935840041FEE2 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642923F25F935840041FEE2 /* SignupCoordinator.swift */; };
+		A642924525F936840041FEE2 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642924425F936840041FEE2 /* SignupView.swift */; };
 		A6598F9525CA797A00780111 /* DatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598F9425CA797A00780111 /* DatabaseManagerProtocol.swift */; };
 		A6598F9A25CA7B9000780111 /* FavoritesDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598F9925CA7B9000780111 /* FavoritesDataSourceSpec.swift */; };
 		A6598FF725CB302200780111 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598FF625CB302200780111 /* URLSessionMock.swift */; };
@@ -147,9 +147,9 @@
 		A63338CE25BE705100572A01 /* BreedsListViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewControllerSpec.swift; sourceTree = "<group>"; };
 		A63338DF25C07B9D00572A01 /* BreedsDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDataSourceSpec.swift; sourceTree = "<group>"; };
 		A639299D25CD7B3F000C7E1B /* FavoritesViewController+SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesViewController+SearchView.swift"; sourceTree = "<group>"; };
-		A642923A25F9351C0041FEE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A642923F25F935840041FEE2 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		A642924425F936840041FEE2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A642923A25F9351C0041FEE2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A642923F25F935840041FEE2 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		A642924425F936840041FEE2 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		A6598F9425CA797A00780111 /* DatabaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerProtocol.swift; sourceTree = "<group>"; };
 		A6598F9925CA7B9000780111 /* FavoritesDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataSourceSpec.swift; sourceTree = "<group>"; };
 		A6598FF625CB302200780111 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 		A63337BB25BCA2EE00572A01 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A642923625F934EF0041FEE2 /* Login */,
+				A642923625F934EF0041FEE2 /* Signup */,
 				A69DD72425C26FDA00AC86FE /* Details */,
 				A633381125BCB3B700572A01 /* Favorites */,
 				A63337C025BCA34400572A01 /* BreedsList */,
@@ -579,20 +579,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A642923625F934EF0041FEE2 /* Login */ = {
+		A642923625F934EF0041FEE2 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				A642925525F954F90041FEE2 /* Service */,
 				A642923925F934FF0041FEE2 /* Coordinator */,
 				A642923825F934F90041FEE2 /* View */,
 				A642923725F934F50041FEE2 /* Controller */,
 			);
-			path = Login;
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		A642923725F934F50041FEE2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A642923A25F9351C0041FEE2 /* LoginViewController.swift */,
+				A642923A25F9351C0041FEE2 /* SignupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -600,7 +601,7 @@
 		A642923825F934F90041FEE2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A642924425F936840041FEE2 /* LoginView.swift */,
+				A642924425F936840041FEE2 /* SignupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,9 +609,24 @@
 		A642923925F934FF0041FEE2 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				A642923F25F935840041FEE2 /* LoginCoordinator.swift */,
+				A642923F25F935840041FEE2 /* SignupCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A642925525F954F90041FEE2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A642925625F954FE0041FEE2 /* Endpoint */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A642925625F954FE0041FEE2 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 		A6598FFE25CB302600780111 /* Network */ = {
@@ -985,7 +1001,7 @@
 				A63337F025BCA63E00572A01 /* UICollectionView+Identifiable.swift in Sources */,
 				A6AA2D7E25C75804005FFABE /* DetailsViewController+Favorites.swift in Sources */,
 				A6A25D2125C457B8001A0630 /* DetailsView.swift in Sources */,
-				A642923B25F9351C0041FEE2 /* LoginViewController.swift in Sources */,
+				A642923B25F9351C0041FEE2 /* SignupViewController.swift in Sources */,
 				A66E7EFA25CA5A1A0059C1F3 /* Assets.swift in Sources */,
 				A633383B25BCBCF700572A01 /* APIScheme.swift in Sources */,
 				A633381B25BCB43A00572A01 /* FavoritesCoordinator.swift in Sources */,
@@ -1002,13 +1018,13 @@
 				A671CE5F25D6ED1700C07E63 /* ErrorView.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
 				A639299E25CD7B3F000C7E1B /* FavoritesViewController+SearchView.swift in Sources */,
-				A642924525F936840041FEE2 /* LoginView.swift in Sources */,
+				A642924525F936840041FEE2 /* SignupView.swift in Sources */,
 				A633382B25BCBC3500572A01 /* APIClientProtocol.swift in Sources */,
 				A66E7EFB25CA5A1A0059C1F3 /* Strings.swift in Sources */,
 				A66E7EC625C8A8220059C1F3 /* FavoritesView.swift in Sources */,
 				A6AA2D6125C63E84005FFABE /* PaddingLabel.swift in Sources */,
 				A69DD72625C2700600AC86FE /* DetailsViewController.swift in Sources */,
-				A642924025F935840041FEE2 /* LoginCoordinator.swift in Sources */,
+				A642924025F935840041FEE2 /* SignupCoordinator.swift in Sources */,
 				A633388525BCFC2700572A01 /* BreedsService.swift in Sources */,
 				A633381625BCB40C00572A01 /* FavoritesViewController.swift in Sources */,
 				A633387225BCF29100572A01 /* BreedsViewCell.swift in Sources */,

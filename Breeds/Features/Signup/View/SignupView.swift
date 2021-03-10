@@ -1,6 +1,12 @@
 import UIKit
 
-final class LoginView: UIView {
+protocol SignupViewDelegate: AnyObject {
+    func signupTap()
+}
+
+final class SignupView: UIView {
+    
+    weak var delegate: SignupViewDelegate?
     
     private let title: UILabel = {
         let label = UILabel()
@@ -37,7 +43,7 @@ final class LoginView: UIView {
         return label
     }()
     
-    let loginButton: UIButton = {
+    let signupButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(L10n.login, for: .normal)
@@ -45,6 +51,7 @@ final class LoginView: UIView {
         button.backgroundColor = .systemOrange
         button.clipsToBounds = true
         button.layer.cornerRadius = 12
+        button.addTarget(self, action: #selector(btnLogin), for: .touchUpInside)
         return button
     }()
     
@@ -57,14 +64,19 @@ final class LoginView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc
+    func btnLogin() {
+        delegate?.signupTap()
+    }
 }
 
-extension LoginView: ViewCode {
+extension SignupView: ViewCode {
     func buildViewHierarchy() {
         addSubview(title)
         addSubview(emailField)
         addSubview(emptyMessage)
-        addSubview(loginButton)
+        addSubview(signupButton)
     }
     
     func setupConstraints() {
@@ -80,10 +92,10 @@ extension LoginView: ViewCode {
             emptyMessage.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 4),
             emptyMessage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
-            loginButton.topAnchor.constraint(equalTo: emptyMessage.bottomAnchor, constant: 8),
-            loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            loginButton.heightAnchor.constraint(equalToConstant: 50)
+            signupButton.topAnchor.constraint(equalTo: emptyMessage.bottomAnchor, constant: 8),
+            signupButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            signupButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            signupButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

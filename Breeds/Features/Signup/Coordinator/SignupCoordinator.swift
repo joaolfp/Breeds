@@ -1,6 +1,6 @@
 import UIKit
 
-final class LoginCoordinator: Coordinator {
+final class SignupCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -10,7 +10,7 @@ final class LoginCoordinator: Coordinator {
     }
     
     func start() {
-        let loginViewController = LoginViewController()
-        show(loginViewController, with: .push)
+        let signupViewController = SignupViewController()
+        show(signupViewController, with: .push)
     }
 }
