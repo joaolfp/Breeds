@@ -27,6 +27,27 @@ final class LoginView: UIView {
         return field
     }()
     
+    let emptyMessage: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = L10n.emptyMessage
+        label.textColor = .red
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.isHidden = true
+        return label
+    }()
+    
+    let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(L10n.login, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemOrange
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 12
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupBaseView()
@@ -42,6 +63,8 @@ extension LoginView: ViewCode {
     func buildViewHierarchy() {
         addSubview(title)
         addSubview(emailField)
+        addSubview(emptyMessage)
+        addSubview(loginButton)
     }
     
     func setupConstraints() {
@@ -52,7 +75,15 @@ extension LoginView: ViewCode {
             emailField.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 20),
             emailField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             emailField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            emailField.heightAnchor.constraint(equalToConstant: 45)
+            emailField.heightAnchor.constraint(equalToConstant: 45),
+            
+            emptyMessage.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 4),
+            emptyMessage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            
+            loginButton.topAnchor.constraint(equalTo: emptyMessage.bottomAnchor, constant: 8),
+            loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            loginButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

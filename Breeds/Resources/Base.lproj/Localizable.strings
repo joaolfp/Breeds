@@ -11,3 +11,5 @@ iconList = "list.dash";
 iconFavorite = "heart";
 messageError = "Connection error";
 email = "Email";
+login = "Log In";
+emptyMessage = "Please fill in the email field";
