@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,7 +37,6 @@
 		A633386425BCF12000572A01 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386325BCF12000572A01 /* UIImageView+Download.swift */; };
 		A633386A25BCF24700572A01 /* BreedsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633386925BCF24700572A01 /* BreedsDataSource.swift */; };
 		A633387225BCF29100572A01 /* BreedsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633387125BCF29100572A01 /* BreedsViewCell.swift */; };
-		A633387C25BCFAAB00572A01 /* BreedsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633387B25BCFAAB00572A01 /* BreedsEndpoint.swift */; };
 		A633388525BCFC2700572A01 /* BreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633388425BCFC2700572A01 /* BreedsService.swift */; };
 		A633388D25BCFC5300572A01 /* BreedsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633388C25BCFC5300572A01 /* BreedsServiceProtocol.swift */; };
 		A633389225BCFC7600572A01 /* BreedsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633389125BCFC7600572A01 /* BreedsDTO.swift */; };
@@ -52,6 +51,7 @@
 		A6598F9A25CA7B9000780111 /* FavoritesDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598F9925CA7B9000780111 /* FavoritesDataSourceSpec.swift */; };
 		A6598FF725CB302200780111 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598FF625CB302200780111 /* URLSessionMock.swift */; };
 		A659900B25CB319B00780111 /* APIClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659900A25CB319B00780111 /* APIClientSpec.swift */; };
+		A66407E825F9189900EE132C /* BreedsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66407E725F9189900EE132C /* BreedsEndpoint.swift */; };
 		A66E7EC625C8A8220059C1F3 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E7EC525C8A8220059C1F3 /* FavoritesView.swift */; };
 		A66E7ECC25C8AFB20059C1F3 /* FavoritesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E7ECB25C8AFB20059C1F3 /* FavoritesViewCell.swift */; };
 		A66E7ED125C8F2290059C1F3 /* FavoritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E7ED025C8F2290059C1F3 /* FavoritesDataSource.swift */; };
@@ -134,7 +134,6 @@
 		A633386325BCF12000572A01 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
 		A633386925BCF24700572A01 /* BreedsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDataSource.swift; sourceTree = "<group>"; };
 		A633387125BCF29100572A01 /* BreedsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewCell.swift; sourceTree = "<group>"; };
-		A633387B25BCFAAB00572A01 /* BreedsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsEndpoint.swift; sourceTree = "<group>"; };
 		A633388425BCFC2700572A01 /* BreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsService.swift; sourceTree = "<group>"; };
 		A633388C25BCFC5300572A01 /* BreedsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsServiceProtocol.swift; sourceTree = "<group>"; };
 		A633389125BCFC7600572A01 /* BreedsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsDTO.swift; sourceTree = "<group>"; };
@@ -149,6 +148,7 @@
 		A6598F9925CA7B9000780111 /* FavoritesDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataSourceSpec.swift; sourceTree = "<group>"; };
 		A6598FF625CB302200780111 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		A659900A25CB319B00780111 /* APIClientSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientSpec.swift; sourceTree = "<group>"; };
+		A66407E725F9189900EE132C /* BreedsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsEndpoint.swift; sourceTree = "<group>"; };
 		A66E7EC525C8A8220059C1F3 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		A66E7ECB25C8AFB20059C1F3 /* FavoritesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewCell.swift; sourceTree = "<group>"; };
 		A66E7ED025C8F2290059C1F3 /* FavoritesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataSource.swift; sourceTree = "<group>"; };
@@ -328,7 +328,6 @@
 				A633384A25BCBDA800572A01 /* Endpoint */,
 				A633384425BCBD6400572A01 /* Extensions */,
 				A633383425BCBCAD00572A01 /* WebService */,
-				A633387B25BCFAAB00572A01 /* BreedsEndpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -508,6 +507,7 @@
 		A633388325BCFC1400572A01 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A66407E625F9187F00EE132C /* Endpoint */,
 				A633388425BCFC2700572A01 /* BreedsService.swift */,
 				A633388C25BCFC5300572A01 /* BreedsServiceProtocol.swift */,
 			);
@@ -578,6 +578,14 @@
 				A659900A25CB319B00780111 /* APIClientSpec.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A66407E625F9187F00EE132C /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				A66407E725F9189900EE132C /* BreedsEndpoint.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 		A66E7ECA25C8AA4B0059C1F3 /* DataSource */ = {
@@ -939,7 +947,6 @@
 				A66E7EFA25CA5A1A0059C1F3 /* Assets.swift in Sources */,
 				A633383B25BCBCF700572A01 /* APIScheme.swift in Sources */,
 				A633381B25BCB43A00572A01 /* FavoritesCoordinator.swift in Sources */,
-				A633387C25BCFAAB00572A01 /* BreedsEndpoint.swift in Sources */,
 				A633382625BCBC1B00572A01 /* APIError.swift in Sources */,
 				A63337C625BCA3BD00572A01 /* BreedsListViewController.swift in Sources */,
 				A633384625BCBD7100572A01 /* Parameters+Utils.swift in Sources */,
@@ -948,6 +955,7 @@
 				A633380D25BCB24200572A01 /* BreedsListCoordinator.swift in Sources */,
 				A633385F25BCC4D300572A01 /* BreedsView.swift in Sources */,
 				A6A8899225F07FA6009BCE0D /* DetailsCoordinator.swift in Sources */,
+				A66407E825F9189900EE132C /* BreedsEndpoint.swift in Sources */,
 				A633386425BCF12000572A01 /* UIImageView+Download.swift in Sources */,
 				A671CE5F25D6ED1700C07E63 /* ErrorView.swift in Sources */,
 				A633377A25BCA09C00572A01 /* AppDelegate.swift in Sources */,
