@@ -22,8 +22,6 @@ final class SignupCoordinator: Coordinator {
 
 extension SignupCoordinator: SignupDelegate {
     func showTabBarController() {
-        let tabBarViewController = TabBarViewController()
-        tabBarViewController.modalPresentationStyle = .fullScreen
-        show(tabBarViewController, with: .present(nil))
+        TabBarCoordinator(navigationController: navigationController).start()
     }
 }
