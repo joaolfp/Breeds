@@ -50,6 +50,10 @@
 		A642923B25F9351C0041FEE2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642923A25F9351C0041FEE2 /* SignupViewController.swift */; };
 		A642924025F935840041FEE2 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642923F25F935840041FEE2 /* SignupCoordinator.swift */; };
 		A642924525F936840041FEE2 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642924425F936840041FEE2 /* SignupView.swift */; };
+		A642926525F958300041FEE2 /* SignupDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642926425F958300041FEE2 /* SignupDTO.swift */; };
+		A642926A25F958770041FEE2 /* SignupEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642926925F958770041FEE2 /* SignupEndpoint.swift */; };
+		A642926F25F959740041FEE2 /* SignupServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642926E25F959740041FEE2 /* SignupServiceProtocol.swift */; };
+		A642927425F95A360041FEE2 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642927325F95A360041FEE2 /* SignupService.swift */; };
 		A6598F9525CA797A00780111 /* DatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598F9425CA797A00780111 /* DatabaseManagerProtocol.swift */; };
 		A6598F9A25CA7B9000780111 /* FavoritesDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598F9925CA7B9000780111 /* FavoritesDataSourceSpec.swift */; };
 		A6598FF725CB302200780111 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6598FF625CB302200780111 /* URLSessionMock.swift */; };
@@ -150,6 +154,10 @@
 		A642923A25F9351C0041FEE2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A642923F25F935840041FEE2 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
 		A642924425F936840041FEE2 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		A642926425F958300041FEE2 /* SignupDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDTO.swift; sourceTree = "<group>"; };
+		A642926925F958770041FEE2 /* SignupEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEndpoint.swift; sourceTree = "<group>"; };
+		A642926E25F959740041FEE2 /* SignupServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupServiceProtocol.swift; sourceTree = "<group>"; };
+		A642927325F95A360041FEE2 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		A6598F9425CA797A00780111 /* DatabaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerProtocol.swift; sourceTree = "<group>"; };
 		A6598F9925CA7B9000780111 /* FavoritesDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataSourceSpec.swift; sourceTree = "<group>"; };
 		A6598FF625CB302200780111 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
@@ -582,6 +590,7 @@
 		A642923625F934EF0041FEE2 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				A642926325F958240041FEE2 /* Model */,
 				A642925525F954F90041FEE2 /* Service */,
 				A642923925F934FF0041FEE2 /* Coordinator */,
 				A642923825F934F90041FEE2 /* View */,
@@ -618,6 +627,8 @@
 			isa = PBXGroup;
 			children = (
 				A642925625F954FE0041FEE2 /* Endpoint */,
+				A642926E25F959740041FEE2 /* SignupServiceProtocol.swift */,
+				A642927325F95A360041FEE2 /* SignupService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -625,8 +636,17 @@
 		A642925625F954FE0041FEE2 /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
+				A642926925F958770041FEE2 /* SignupEndpoint.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		A642926325F958240041FEE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A642926425F958300041FEE2 /* SignupDTO.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A6598FFE25CB302600780111 /* Network */ = {
@@ -986,10 +1006,12 @@
 				A633385125BCBE0700572A01 /* URL+Utils.swift in Sources */,
 				A633384025BCBD1D00572A01 /* APIMethod.swift in Sources */,
 				A633383025BCBC6C00572A01 /* APIClient.swift in Sources */,
+				A642927425F95A360041FEE2 /* SignupService.swift in Sources */,
 				A63337F525BCA69B00572A01 /* UITableView+Identifiable.swift in Sources */,
 				A6598F9525CA797A00780111 /* DatabaseManagerProtocol.swift in Sources */,
 				A633383625BCBCC800572A01 /* APIStatusCode.swift in Sources */,
 				A633384C25BCBDB500572A01 /* APIEndpointProtocol.swift in Sources */,
+				A642926525F958300041FEE2 /* SignupDTO.swift in Sources */,
 				A633378425BCA09C00572A01 /* Breeds.xcdatamodeld in Sources */,
 				A6AA2D8625C82AB4005FFABE /* DatabaseManager.swift in Sources */,
 				A63337DC25BCA4F200572A01 /* Coordinator.swift in Sources */,
@@ -997,6 +1019,7 @@
 				A633388D25BCFC5300572A01 /* BreedsServiceProtocol.swift in Sources */,
 				A633382025BCB4E300572A01 /* TabBarViewController.swift in Sources */,
 				A66E7ED125C8F2290059C1F3 /* FavoritesDataSource.swift in Sources */,
+				A642926F25F959740041FEE2 /* SignupServiceProtocol.swift in Sources */,
 				A63337E125BCA54900572A01 /* ViewCode.swift in Sources */,
 				A63337F025BCA63E00572A01 /* UICollectionView+Identifiable.swift in Sources */,
 				A6AA2D7E25C75804005FFABE /* DetailsViewController+Favorites.swift in Sources */,
@@ -1024,6 +1047,7 @@
 				A66E7EC625C8A8220059C1F3 /* FavoritesView.swift in Sources */,
 				A6AA2D6125C63E84005FFABE /* PaddingLabel.swift in Sources */,
 				A69DD72625C2700600AC86FE /* DetailsViewController.swift in Sources */,
+				A642926A25F958770041FEE2 /* SignupEndpoint.swift in Sources */,
 				A642924025F935840041FEE2 /* SignupCoordinator.swift in Sources */,
 				A633388525BCFC2700572A01 /* BreedsService.swift in Sources */,
 				A633381625BCB40C00572A01 /* FavoritesViewController.swift in Sources */,

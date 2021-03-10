@@ -1,5 +1,9 @@
 import UIKit
 
+protocol SignupDelegate: AnyObject {
+    func showTabBarController()
+}
+
 final class SignupCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
@@ -11,6 +15,15 @@ final class SignupCoordinator: Coordinator {
     
     func start() {
         let signupViewController = SignupViewController()
+        signupViewController.coordinator = self
         show(signupViewController, with: .push)
+    }
+}
+
+extension SignupCoordinator: SignupDelegate {
+    func showTabBarController() {
+        let tabBarViewController = TabBarViewController()
+        tabBarViewController.modalPresentationStyle = .fullScreen
+        show(tabBarViewController, with: .present(nil))
     }
 }

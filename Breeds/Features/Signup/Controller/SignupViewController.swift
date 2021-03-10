@@ -3,6 +3,8 @@ import UIKit
 final class SignupViewController: UIViewController {
     
     private let signupView = SignupView()
+    private let service = SignupService()
+    var coordinator: SignupDelegate?
     
     override func loadView() {
         view = signupView
@@ -32,11 +34,19 @@ extension SignupViewController: SignupViewDelegate {
             signupView.emptyMessage.isHidden = false
         } else {
             signupView.emptyMessage.isHidden = true
-            loginConnect()
+            loginConnect(email: email)
         }
     }
     
-    private func loginConnect() {
-        
+    private func loginConnect(email: String) {
+        service.signup(email: email) { result in
+            switch result {
+            case .success(let signup):
+                print(signup.user.token)
+                self.coordinator?.showTabBarController()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
