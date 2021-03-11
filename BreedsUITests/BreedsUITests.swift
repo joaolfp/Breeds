@@ -17,10 +17,7 @@ class BreedsUITests: XCTestCase {
     }
     
     func testSignupWithSuccess() {
-        let textField = app.textFields.firstMatch
-        textField.tap()
-        textField.typeText("joao@uol.com")
-        app.buttons["Log In"].tap()
+        signup(text: "joao@uol.com")
         
         let title = app.staticTexts["Breeds"]
         XCTAssertTrue(title.exists)
