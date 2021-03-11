@@ -80,23 +80,21 @@ extension SignupView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: topAnchor, constant: 60),
-            title.centerXAnchor.constraint(equalTo: centerXAnchor),
+        title.topAnchor(equalTo: topAnchor, constant: 60)
+        title.centerXAnchor(equalTo: centerXAnchor)
             
-            emailField.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 20),
-            emailField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            emailField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            emailField.heightAnchor.constraint(equalToConstant: 45),
+        emailField.topAnchor(equalTo: title.bottomAnchor, constant: 20)
+        emailField.leadingAnchor(equalTo: leadingAnchor, constant: 20)
+        emailField.trailingAnchor(equalTo: trailingAnchor, constant: -20)
+        emailField.heightAnchor(equalToConstant: 45)
             
-            emptyMessage.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 4),
-            emptyMessage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+        emptyMessage.topAnchor(equalTo: emailField.bottomAnchor, constant: 4)
+        emptyMessage.leadingAnchor(equalTo: leadingAnchor, constant: 20)
             
-            signupButton.topAnchor.constraint(equalTo: emptyMessage.bottomAnchor, constant: 8),
-            signupButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            signupButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            signupButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
+        signupButton.topAnchor(equalTo: emptyMessage.bottomAnchor, constant: 8)
+        signupButton.leadingAnchor(equalTo: leadingAnchor, constant: 20)
+        signupButton.trailingAnchor(equalTo: trailingAnchor, constant: -20)
+        signupButton.heightAnchor(equalToConstant: 50)
     }
     
     func configureViews() {

@@ -36,12 +36,10 @@ extension FavoritesView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            favoritesTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            favoritesTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            favoritesTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            favoritesTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
-        ])
+        favoritesTableView.topAnchor(equalTo: safeAreaLayoutGuide.topAnchor)
+        favoritesTableView.leadingAnchor(equalTo: leadingAnchor)
+        favoritesTableView.trailingAnchor(equalTo: trailingAnchor)
+        favoritesTableView.bottomAnchor(equalTo: safeAreaLayoutGuide.bottomAnchor)
     }
     
     func configureViews() {

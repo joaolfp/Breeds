@@ -42,15 +42,13 @@ extension BreedsView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            breedsCollections.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            breedsCollections.leadingAnchor.constraint(equalTo: leadingAnchor),
-            breedsCollections.trailingAnchor.constraint(equalTo: trailingAnchor),
-            breedsCollections.bottomAnchor.constraint(equalTo: bottomAnchor),
+        breedsCollections.topAnchor(equalTo: safeAreaLayoutGuide.topAnchor)
+        breedsCollections.leadingAnchor(equalTo: leadingAnchor)
+        breedsCollections.trailingAnchor(equalTo: trailingAnchor)
+        breedsCollections.bottomAnchor(equalTo: bottomAnchor)
             
-            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+        activityIndicator.centerXAnchor(equalTo: centerXAnchor)
+        activityIndicator.centerYAnchor(equalTo: centerYAnchor)
     }
     
     func configureViews() {

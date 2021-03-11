@@ -9,6 +9,7 @@ disabled_rules:
   - void_return
   - unused_enumerated
   - function_parameter_count
+  - file_length
 
 opt_in_rules:
   - empty_count

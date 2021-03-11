@@ -29,11 +29,9 @@ extension BreedsViewCell: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            photo.topAnchor.constraint(equalTo: contentView.topAnchor),
-            photo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            photo.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            photo.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
+        photo.topAnchor(equalTo: contentView.topAnchor)
+        photo.leadingAnchor(equalTo: contentView.leadingAnchor)
+        photo.trailingAnchor(equalTo: contentView.trailingAnchor)
+        photo.bottomAnchor(equalTo: contentView.bottomAnchor)
     }
 }

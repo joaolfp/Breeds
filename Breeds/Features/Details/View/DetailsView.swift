@@ -127,24 +127,22 @@ extension DetailsView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            scrollView.widthAnchor.constraint(equalTo: widthAnchor),
+        scrollView.topAnchor(equalTo: topAnchor)
+        scrollView.leadingAnchor(equalTo: leadingAnchor)
+        scrollView.trailingAnchor(equalTo: trailingAnchor)
+        scrollView.bottomAnchor(equalTo: bottomAnchor)
+        scrollView.widthAnchor(equalTo: widthAnchor)
             
-            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+        contentView.topAnchor(equalTo: scrollView.topAnchor, constant: 16)
+        contentView.leadingAnchor(equalTo: scrollView.leadingAnchor)
+        contentView.trailingAnchor(equalTo: scrollView.trailingAnchor)
+        contentView.bottomAnchor(equalTo: scrollView.bottomAnchor, constant: -16)
+        contentView.widthAnchor(equalTo: scrollView.widthAnchor)
             
-            stackContentView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackContentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            stackContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            stackContentView.heightAnchor.constraint(equalTo: contentView.heightAnchor)
-        ])
+        stackContentView.topAnchor(equalTo: contentView.topAnchor)
+        stackContentView.leadingAnchor(equalTo: contentView.leadingAnchor, constant: 16)
+        stackContentView.trailingAnchor(equalTo: contentView.trailingAnchor, constant: -16)
+        stackContentView.heightAnchor(equalTo: contentView.heightAnchor)
     }
     
     func configureViews() {

@@ -40,15 +40,13 @@ extension FavoritesViewCell: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            photo.topAnchor.constraint(equalTo: contentView.topAnchor),
-            photo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            photo.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            photo.widthAnchor.constraint(equalToConstant: 100),
+        photo.topAnchor(equalTo: contentView.topAnchor)
+        photo.leadingAnchor(equalTo: contentView.leadingAnchor)
+        photo.bottomAnchor(equalTo: contentView.bottomAnchor)
+        photo.widthAnchor(equalToConstant: 100)
             
-            name.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: 8),
-            name.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-        ])
+        name.leadingAnchor(equalTo: photo.trailingAnchor, constant: 8)
+        name.centerYAnchor(equalTo: contentView.centerYAnchor)
     }
     
     func configureViews() {
