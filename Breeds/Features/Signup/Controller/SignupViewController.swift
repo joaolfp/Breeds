@@ -39,11 +39,11 @@ extension SignupViewController: SignupViewDelegate {
     }
     
     private func loginConnect(email: String) {
-        service.signup(email: email) { result in
+        service.signup(email: email) { [weak self] result in
             switch result {
             case .success(let signup):
                 print(signup.user.token)
-                self.coordinator?.showTabBarController()
+                self?.coordinator?.showTabBarController()
             case .failure(let error):
                 print(error.localizedDescription)
             }
