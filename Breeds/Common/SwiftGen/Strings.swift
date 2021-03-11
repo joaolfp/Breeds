@@ -14,6 +14,10 @@ internal enum L10n {
   internal static let addFavorites = L10n.tr("Localizable", "addFavorites")
   /// Breeds
   internal static let breedsName = L10n.tr("Localizable", "breedsName")
+  /// Email
+  internal static let email = L10n.tr("Localizable", "email")
+  /// Please fill in the email field
+  internal static let emptyMessage = L10n.tr("Localizable", "emptyMessage")
   /// BreedEntity
   internal static let entityName = L10n.tr("Localizable", "entityName")
   /// Favorites
@@ -26,6 +30,8 @@ internal enum L10n {
   internal static let iconList = L10n.tr("Localizable", "iconList")
   /// Life span:
   internal static let lifeSpan = L10n.tr("Localizable", "lifeSpan")
+  /// Log In
+  internal static let login = L10n.tr("Localizable", "login")
   /// Connection error
   internal static let messageError = L10n.tr("Localizable", "messageError")
   /// This dog has no description

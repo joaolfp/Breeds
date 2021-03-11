@@ -23,7 +23,6 @@ class BreedsListCoordinator: Coordinator {
 
 extension BreedsListCoordinator: BreedsListDelegate {
     func didSelectedBreed(_ selectedBreed: BreedsDTO) {
-        let detailsCoordinator = DetailsCoordinator(navigationController: navigationController, breedsDTO: selectedBreed)
-        detailsCoordinator.start()
+        DetailsCoordinator(navigationController: navigationController, breedsDTO: selectedBreed).start()
     }
 }
