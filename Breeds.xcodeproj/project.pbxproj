@@ -72,6 +72,7 @@
 		A671CE5F25D6ED1700C07E63 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671CE5E25D6ED1700C07E63 /* ErrorView.swift */; };
 		A67E2AA425FA9B05006A93BE /* SwiftKeychainWrapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67E2AA325FA9B05006A93BE /* SwiftKeychainWrapper.xcframework */; };
 		A67E2AA525FA9B05006A93BE /* SwiftKeychainWrapper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A67E2AA325FA9B05006A93BE /* SwiftKeychainWrapper.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A67E2AAB25FAA12A006A93BE /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E2AAA25FAA12A006A93BE /* Keychain.swift */; };
 		A69DD72625C2700600AC86FE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DD72525C2700600AC86FE /* DetailsViewController.swift */; };
 		A6A25D2125C457B8001A0630 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A25D2025C457B8001A0630 /* DetailsView.swift */; };
 		A6A8899225F07FA6009BCE0D /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8899125F07FA6009BCE0D /* DetailsCoordinator.swift */; };
@@ -195,6 +196,7 @@
 		A66E7F0025CA5AC30059C1F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Breeds/Resources/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		A671CE5E25D6ED1700C07E63 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A67E2AA325FA9B05006A93BE /* SwiftKeychainWrapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftKeychainWrapper.xcframework; path = Carthage/Build/SwiftKeychainWrapper.xcframework; sourceTree = "<group>"; };
+		A67E2AAA25FAA12A006A93BE /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		A69DD72525C2700600AC86FE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A6A25D2025C457B8001A0630 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A6A8899125F07FA6009BCE0D /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				A63337CE25BCA46400572A01 /* Coordinator */,
 				A63337CF25BCA46A00572A01 /* CoreData */,
 				A63337E525BCA5BC00572A01 /* Extensions */,
+				A67E2AA925FAA11B006A93BE /* Keychain */,
 				A6AA2D5F25C63E70005FFABE /* Library */,
 				A66E7EF725CA59620059C1F3 /* SwiftGen */,
 				A63337CD25BCA45C00572A01 /* TabBar */,
@@ -732,6 +735,14 @@
 			path = ViewsStates;
 			sourceTree = "<group>";
 		};
+		A67E2AA925FAA11B006A93BE /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				A67E2AAA25FAA12A006A93BE /* Keychain.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		A69DD72425C26FDA00AC86FE /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -1077,6 +1088,7 @@
 				A639299E25CD7B3F000C7E1B /* FavoritesViewController+SearchView.swift in Sources */,
 				A642924525F936840041FEE2 /* SignupView.swift in Sources */,
 				A633382B25BCBC3500572A01 /* APIClientProtocol.swift in Sources */,
+				A67E2AAB25FAA12A006A93BE /* Keychain.swift in Sources */,
 				A6C69EF625F9C8B0003FB0A8 /* UIView+Layout.swift in Sources */,
 				A66E7EFB25CA5A1A0059C1F3 /* Strings.swift in Sources */,
 				A66E7EC625C8A8220059C1F3 /* FavoritesView.swift in Sources */,
