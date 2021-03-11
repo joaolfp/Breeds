@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -70,6 +70,8 @@
 		A66E7EFB25CA5A1A0059C1F3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E7EF925CA5A190059C1F3 /* Strings.swift */; };
 		A66E7F0125CA5AC30059C1F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A66E7EFF25CA5AC30059C1F3 /* Localizable.strings */; };
 		A671CE5F25D6ED1700C07E63 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671CE5E25D6ED1700C07E63 /* ErrorView.swift */; };
+		A67E2AA425FA9B05006A93BE /* SwiftKeychainWrapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67E2AA325FA9B05006A93BE /* SwiftKeychainWrapper.xcframework */; };
+		A67E2AA525FA9B05006A93BE /* SwiftKeychainWrapper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A67E2AA325FA9B05006A93BE /* SwiftKeychainWrapper.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A69DD72625C2700600AC86FE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DD72525C2700600AC86FE /* DetailsViewController.swift */; };
 		A6A25D2125C457B8001A0630 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A25D2025C457B8001A0630 /* DetailsView.swift */; };
 		A6A8899225F07FA6009BCE0D /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8899125F07FA6009BCE0D /* DetailsCoordinator.swift */; };
@@ -103,6 +105,20 @@
 			remoteInfo = Breeds;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A67E2AA625FA9B05006A93BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A67E2AA525FA9B05006A93BE /* SwiftKeychainWrapper.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +194,7 @@
 		A66E7EF925CA5A190059C1F3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		A66E7F0025CA5AC30059C1F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Breeds/Resources/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		A671CE5E25D6ED1700C07E63 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		A67E2AA325FA9B05006A93BE /* SwiftKeychainWrapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftKeychainWrapper.xcframework; path = Carthage/Build/SwiftKeychainWrapper.xcframework; sourceTree = "<group>"; };
 		A69DD72525C2700600AC86FE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A6A25D2025C457B8001A0630 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A6A8899125F07FA6009BCE0D /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
@@ -202,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67E2AA425FA9B05006A93BE /* SwiftKeychainWrapper.xcframework in Frameworks */,
 				D6D93168A754292D703E0233 /* Pods_Breeds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +246,7 @@
 		581AD5F6D5290E20AB32EB99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A67E2AA325FA9B05006A93BE /* SwiftKeychainWrapper.xcframework */,
 				F669DFF9495BBB1F9E188D19 /* Pods_Breeds.framework */,
 				9148F98AA7046AF6EB062D82 /* Pods_Breeds_BreedsUITests.framework */,
 				01FCFFE7F63EC2A99B7FD500 /* Pods_BreedsTests.framework */,
@@ -805,6 +824,7 @@
 				A633377325BCA09C00572A01 /* Frameworks */,
 				A633377425BCA09C00572A01 /* Resources */,
 				A633380825BCA81200572A01 /* SwiftLint */,
+				A67E2AA625FA9B05006A93BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
