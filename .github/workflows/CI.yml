@@ -28,8 +28,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pods-
       
-    - name: Install Cocoapods
+    - name: Install CocoaPods
       run: pod install
+      
+    - name: Install Carthage
+      run: carthage update --use-xcframeworks
       
     - name: Bundle update
       run: bundle update
